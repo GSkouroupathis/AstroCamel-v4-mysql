@@ -1,0 +1,165 @@
+<html>
+<head>
+
+<meta http-equiv="content-type" content="text/html;charset=utf-8">
+
+<meta name="description" content="Quantum Computing 1st Year Project: Quantum Logic">
+
+<meta name="author" content="George Skouroupathis">
+
+<title>Quantum Logic</title>
+
+<link rel="stylesheet" type="text/css" href="../style.css" />
+
+<link rel="icon" type="image/x-icon" href="../imgs/favicon.ico" />
+<link rel="shortcut icon" type="image/x-icon" href="../imgs/favicon.ico" />
+
+</head>
+
+<body>
+
+<div id="header">
+<h1 id="header-h1">Quantum Logic</h1>
+<span id="header-more">An insight to the quantum world</span>
+</div>
+
+<div id="container">
+
+<div id="menutop" class="menu">
+<center>
+<ul>
+<a href="../index.html" class="home">&nbsp;</a><a href="../index.html"> <li>Home</li></a>
+<a href="../mechanics/mechanics.html"> <li>Mechanics</li></a>
+<a href="../computing/computing.html" class="current"> <li>Computing</li></a>
+<a href="../logic/logicthroughtime.html"> <li>Logic</li></a>
+<a href="../asides/bvn.html"> <li>Asides</li></a>
+<a href="../references/references.html"> <li>References</li></a>
+<a href="../faqs/faqs.html"> <li>FAQs</li></a>
+</ul>
+</center>
+</div>
+
+
+<div id="main">
+<!-- Research goes here -->
+<h3>Quantum Computing</h3>
+
+<p><i>&#34;I'm not happy with all the analyses that go with just the classical theory, because nature isn't classical, dammit, and if you want to make a simulation of nature, you'd better make it
+quantum mechanical, and by golly it's a wonderful problem, because it doesn't look so easy.&#34;</i>
+Richard Feynman, 1982</p>
+
+<p>Richard Feynman came up with the above conclusion in his 1982 paper &#34;Simulating physics with computers&#34;. He visualised a machine capable of simulating quantum 
+properties. Recent developments in the field of quantum mechanics raise the odds that a quantum computer can be built so that it is operates according to the 
+theoretical model.</p>
+
+<p><b>A quantum computer is a machine that uses the laws of quantum mechanics to perform calculations, ideally in a more efficient way than a classical computer.</b></p> 
+
+<p>The basic unit of quantum information is the qubit. Its basis states are:
+<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	| 0 > &nbsp;  and  &nbsp; |1 >   &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;    to account for the 0 and 1 bits in classical information.
+<br />
+Qubits are represented by quantum particles like photons and electrons, whereas their states are the possible values of some physical property like the electron 
+spin (positive or negative).</p>
+
+<p>The advantage of using a qubit rather than a bit is that a qubit initially exists as a superposition of both its basis states. 
+When measured, the qubit will adopt a single value randomly, according to the probability associated with each of its basis states.
+<br />
+	e.g.   |qubit >    =   a | 0 >   +   b | 1 >
+	<br />
+where a and b are probability amplitudes satisfying |a|2 + |b|2 = 1
+<br />
+This allows a quantum computer to carry out a task with many inputs in parallel.</p>
+
+<p>A quantum computer&#39;s memory consists of qubits (|0> , |1>, or superposition states). 
+The memory itself is a superposition of all these qubits. For example, consider a register (collection of qubits) consisting of 3 qubits. 
+The superposition of all possible states is:
+<br />
+	|state_of_register >   =  a|000>   +   b| 001>   +   c|010>   +   d|011>   +   e|100>   +   
+f|101>   +   g|110>   +   h|111>
+<br />
+    where letters a to h represent amplitude probabilities.</p>
+	
+<center> <img src="../imgs/Qubit.png"/> </center>
+<br />
+
+<p>i.e. while a classical 3-bit register can store just one number between 0 and 7, a quantum 3-qubit register can store all numbers between this range.
+An n-qubit sized register can therefore store up to 2n states simultaneously.
+<br />
+The benefit of using a quantum computer is that it performs operations on all these states in only one computation step. 
+As a result, the operations use fewer resources and they are carried out faster.</p>
+
+<center> <img src="../imgs/Function.png"/> </center>
+<br />
+
+<p>A quantum computer can solve some problems faster than a classical one. An example of such problems is the capability to produce the prime factors of larger and 
+larger numbers in a reasonably finite time. In quantum computing this can be done in polynomial time using Shor&#39;s algorithm.</p>
+
+<p>When an algorithm used by the quantum computer terminates, a measurement is made. In quantum computing measurement is an attempt to convert the quantum information 
+of a system into classical information (i.e. bits). During this process the superposition randomly reduces to a single state. The value of this final state (i.e. the 
+result of the algorithm) is then output to the user, but in the meantime <b>the initial superposition state has been destroyed.</b></p>
+
+<p>Quantum computing makes use of entanglement too. When two or more qubits form an entangled state, the measurement of one qubit causes a correlated measurement on the 
+other qubit(s) as well.</p>
+
+<p>Differences between classical and quantum computer:</p>
+
+<table border="1">
+<tr>
+<td><b>Classical</b></td><td><b>Quantum</b></td>
+</tr>
+<tr>
+<td>Recourse: bit</td><td>Resource: bit, qubit, ebit (bit of entanglement, eg when A and B share an entangled 
+<br />pair of qubits)</td>
+</tr><tr>
+<td>A bit represents the value 0 or 1</td><td>A qubit represents the value 0, 1 or any superposition of both these values</td>
+</tr>
+<tr>
+<td>Information can be copied</td><td>No-cloning theorem: no machine can possibly produce an identical copy of a qubit</td>
+</tr>
+</table>
+<br />
+
+More applications:
+<br />
+<ul>
+	<li>Quantum cryptography &#45; Bennett and Brassard, 1984. They created the BB84 protocol regarding quantum key distribution. The use of this quantum protocol 
+	makes unauthorised intervention practically impossible to hide.</li>
+	<li>Quantum teleportation &#45; Uses entanglement to transfer one qubit of quantum information from origin A to destination B. Origin qubit is destroyed in the process.</li>
+</ul>
+<br />
+Like everything, quantum computers have drawbacks too:
+<br />
+<ul>
+	<li><b>Measurement is irreversible:</b> when we make a measurement on the state of the computer we destroy it; we cannot do any subsequent measurements based on the 
+	initial data.</li>
+	<li><b>Measurement is partial:</b> according to the uncertainty principle, we cannot know every property of a particle with 100% accuracy. Therefore, measuring the 
+	state of a quantum computer may not produce an absolutely representative output. Indeed, many algorithms generate the correct answer with a certain probability.</li>
+	<li><b>Decoherence:</b> the quantum computer must be completely isolated from the surroundings as the interaction with other microscopic objects will destroy 
+	its superposition.</li>
+</ul>
+
+</div>
+
+<div id="nextprev">
+<span id="previous"><a href="../mechanics/states.html">&#171; Previous</a></span>
+<span id="next"><a href="../logic/logicthroughtime.html">Next &#187;</a></span>
+</div>
+
+<div id="menu-bottom" class="menu">
+<center>
+<ul>
+<a href="../index.html" class="home">&nbsp;</a><a href="../index.html"> <li>Home</li></a>
+<a href="../mechanics/mechanics.html"> <li>Mechanics</li></a>
+<a href="../computing/computing.html" class="current"> <li>Computing</li></a>
+<a href="../logic/logicthroughtime.html"> <li>Logic</li></a>
+<a href="../asides/bvn.html"> <li>Asides</li></a>
+<a href="../references/references.html"> <li>References</li></a>
+<a href="../faqs/faqs.html"> <li>FAQs</li></a>
+</ul>
+</center>
+</div>
+
+</div>
+
+</body>
+</html>

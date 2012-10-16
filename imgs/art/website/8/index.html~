@@ -1,0 +1,299 @@
+<html>
+<head>
+
+<meta http-equiv="content-type" content="text/html;charset=utf-8">
+
+<meta name="description" content="Quantum Computing 1st Year Project: Quantum Logic">
+
+<meta name="author" content="George Skouroupathis">
+
+<title>Quantum Logic</title>
+
+<link rel="stylesheet" type="text/css" href="style.css" />
+
+<link rel="icon" type="image/x-icon" href="imgs/favicon.ico" />
+<link rel="shortcut icon" type="image/x-icon" href="imgs/favicon.ico" />
+
+</head>
+
+<body>
+
+<div id="header">
+<h1 id="header-h1">Quantum Logic</h1>
+<span id="header-more">A project by...</span>
+</div>
+
+<div id="container">
+
+<div id="menutop" class="menu">
+<center>
+<ul>
+<a href="#a"> <li>Logic Stuff</li></a>
+<a href="#b"> <li>More Logic</li></a>
+<a href="#c"> <li>Fuck Logic</li></a>
+<a href="#d"> <li>Fuck The Police</li></a>
+<a href="#e"> <li>Hack The Planet</li></a>
+</ul>
+<center>
+</div>
+
+<div id="main">
+<!-- Research goes here -->
+<a name="a"><h3>Logic Stuff</h3></a>
+<p>Two roads diverged in a yellow wood
+and sorry I could not travel both
+And be one traveller, long I stood
+and looked down one as far as I could
+to where it bent in the undergrowth;</p>
+
+<p>Then took the other, as just as fair,
+and having perhaps the better claim
+because it was grassy and wanted wear;
+though as for that, the passing there
+had worn them really about the same,</p>
+
+<p>Two roads diverged in a yellow wood
+and sorry I could not travel both
+And be one traveller, long I stood
+and looked down one as far as I could
+to where it bent in the undergrowth;</p>
+
+<p>Then took the other, as just as fair,
+and having perhaps the better claim
+because it was grassy and wanted wear;
+though as for that, the passing there
+had worn them really about the same,</p>
+
+<p>Two roads diverged in a yellow wood
+and sorry I could not travel both
+And be one traveller, long I stood
+and looked down one as far as I could
+to where it bent in the undergrowth;</p>
+
+<p>Then took the other, as just as fair,
+and having perhaps the better claim
+because it was grassy and wanted wear;
+though as for that, the passing there
+had worn them really about the same,</p>
+
+<a name="b"><h3>More Logic</h3></a>
+<p>And both that morning equally lay
+in leaves no feet had trodden black.
+Oh, I kept the first for another day!
+Yet knowing how way leads on to way,
+I doubted if I should ever come back.</p>
+
+<p>And both that morning equally lay
+in leaves no feet had trodden black.
+Oh, I kept the first for another day!
+Yet knowing how way leads on to way,
+I doubted if I should ever come back.</p>
+
+<p>And both that morning equally lay
+in leaves no feet had trodden black.
+Oh, I kept the first for another day!
+Yet knowing how way leads on to way,
+I doubted if I should ever come back.</p>
+
+<p>And both that morning equally lay
+in leaves no feet had trodden black.
+Oh, I kept the first for another day!
+Yet knowing how way leads on to way,
+I doubted if I should ever come back.</p>
+
+<p>And both that morning equally lay
+in leaves no feet had trodden black.
+Oh, I kept the first for another day!
+Yet knowing how way leads on to way,
+I doubted if I should ever come back.</p>
+
+<a name="c">Fuck Logic</a>
+<p>I shall be telling this with a sigh
+Somewhere ages and ages hence:
+Two roads diverged in a wood, and I --
+I took the one less travelled by,
+and that has made all the difference</p>
+
+<p>I shall be telling this with a sigh
+Somewhere ages and ages hence:
+Two roads diverged in a wood, and I --
+I took the one less travelled by,
+and that has made all the difference</p>
+
+<p>I shall be telling this with a sigh
+Somewhere ages and ages hence:
+Two roads diverged in a wood, and I --
+I took the one less travelled by,
+and that has made all the difference</p>
+
+<p>I shall be telling this with a sigh
+Somewhere ages and ages hence:
+Two roads diverged in a wood, and I --
+I took the one less travelled by,
+and that has made all the difference</p>
+
+<p>I shall be telling this with a sigh
+Somewhere ages and ages hence:
+Two roads diverged in a wood, and I --
+I took the one less travelled by,
+and that has made all the difference</p>
+
+<p>I shall be telling this with a sigh
+Somewhere ages and ages hence:
+Two roads diverged in a wood, and I --
+I took the one less travelled by,
+and that has made all the difference</p>
+
+<a name="d">Fuck The Police</a>
+<p>O CAPTAIN! my Captain! our fearful trip is done;
+The ship has weather’d every rack, the prize we sought is won;
+The port is near, the bells I hear, the people all exulting,
+While follow eyes the steady keel, the vessel grim and daring:
+But O heart! heart! heart!
+O the bleeding drops of red,
+Where on the deck my Captain lies,
+Fallen cold and dead.</p>
+
+<p>O Captain! my Captain! rise up and hear the bells;
+Rise up—for you the flag is flung—for you the bugle trills;
+For you bouquets and ribbon’d wreaths—for you the shores a-crowding;
+For you they call, the swaying mass, their eager faces turning;
+Here Captain! dear father!
+This arm beneath your head;
+It is some dream that on the deck,
+You’ve fallen cold and dead.</p>
+
+<p>O CAPTAIN! my Captain! our fearful trip is done;
+The ship has weather’d every rack, the prize we sought is won;
+The port is near, the bells I hear, the people all exulting,
+While follow eyes the steady keel, the vessel grim and daring:
+But O heart! heart! heart!
+O the bleeding drops of red,
+Where on the deck my Captain lies,
+Fallen cold and dead.</p>
+
+<p>O Captain! my Captain! rise up and hear the bells;
+Rise up—for you the flag is flung—for you the bugle trills;
+For you bouquets and ribbon’d wreaths—for you the shores a-crowding;
+For you they call, the swaying mass, their eager faces turning;
+Here Captain! dear father!
+This arm beneath your head;
+It is some dream that on the deck,
+You’ve fallen cold and dead.</p>
+
+<p>O CAPTAIN! my Captain! our fearful trip is done;
+The ship has weather’d every rack, the prize we sought is won;
+The port is near, the bells I hear, the people all exulting,
+While follow eyes the steady keel, the vessel grim and daring:
+But O heart! heart! heart!
+O the bleeding drops of red,
+Where on the deck my Captain lies,
+Fallen cold and dead.</p>
+
+<p>O Captain! my Captain! rise up and hear the bells;
+Rise up—for you the flag is flung—for you the bugle trills;
+For you bouquets and ribbon’d wreaths—for you the shores a-crowding;
+For you they call, the swaying mass, their eager faces turning;
+Here Captain! dear father!
+This arm beneath your head;
+It is some dream that on the deck,
+You’ve fallen cold and dead.</p>
+
+<p>O CAPTAIN! my Captain! our fearful trip is done;
+The ship has weather’d every rack, the prize we sought is won;
+The port is near, the bells I hear, the people all exulting,
+While follow eyes the steady keel, the vessel grim and daring:
+But O heart! heart! heart!
+O the bleeding drops of red,
+Where on the deck my Captain lies,
+Fallen cold and dead.</p>
+
+<p>O Captain! my Captain! rise up and hear the bells;
+Rise up—for you the flag is flung—for you the bugle trills;
+For you bouquets and ribbon’d wreaths—for you the shores a-crowding;
+For you they call, the swaying mass, their eager faces turning;
+Here Captain! dear father!
+This arm beneath your head;
+It is some dream that on the deck,
+You’ve fallen cold and dead.</p>
+
+<a name="e"><h3>Hack The Planet</h3></a>
+<p>My Captain does not answer, his lips are pale and still;
+My father does not feel my arm, he has no pulse nor will;
+The ship is anchor’d safe and sound, its voyage closed and done;
+From fearful trip, the victor ship, comes in with object won;
+Exult, O shores, and ring, O bells!
+But I, with mournful tread,
+Walk the deck my Captain lies,
+Fallen cold and dead. </p>
+
+<p>My Captain does not answer, his lips are pale and still;
+My father does not feel my arm, he has no pulse nor will;
+The ship is anchor’d safe and sound, its voyage closed and done;
+From fearful trip, the victor ship, comes in with object won;
+Exult, O shores, and ring, O bells!
+But I, with mournful tread,
+Walk the deck my Captain lies,
+Fallen cold and dead. </p>
+
+<p>My Captain does not answer, his lips are pale and still;
+My father does not feel my arm, he has no pulse nor will;
+The ship is anchor’d safe and sound, its voyage closed and done;
+From fearful trip, the victor ship, comes in with object won;
+Exult, O shores, and ring, O bells!
+But I, with mournful tread,
+Walk the deck my Captain lies,
+Fallen cold and dead. </p>
+
+<p>My Captain does not answer, his lips are pale and still;
+My father does not feel my arm, he has no pulse nor will;
+The ship is anchor’d safe and sound, its voyage closed and done;
+From fearful trip, the victor ship, comes in with object won;
+Exult, O shores, and ring, O bells!
+But I, with mournful tread,
+Walk the deck my Captain lies,
+Fallen cold and dead. </p>
+
+<p>My Captain does not answer, his lips are pale and still;
+My father does not feel my arm, he has no pulse nor will;
+The ship is anchor’d safe and sound, its voyage closed and done;
+From fearful trip, the victor ship, comes in with object won;
+Exult, O shores, and ring, O bells!
+But I, with mournful tread,
+Walk the deck my Captain lies,
+Fallen cold and dead. </p>
+
+<p>O CAPTAIN! my Captain! our fearful trip is done;
+The ship has weather’d every rack, the prize we sought is won;
+The port is near, the bells I hear, the people all exulting,
+While follow eyes the steady keel, the vessel grim and daring:
+But O heart! heart! heart!
+O the bleeding drops of red,
+Where on the deck my Captain lies,
+Fallen cold and dead.</p>
+
+<p>O Captain! my Captain! rise up and hear the bells;
+Rise up—for you the flag is flung—for you the bugle trills;
+For you bouquets and ribbon’d wreaths—for you the shores a-crowding;
+For you they call, the swaying mass, their eager faces turning;
+Here Captain! dear father!
+This arm beneath your head;
+It is some dream that on the deck,
+You’ve fallen cold and dead.</p>
+
+</div>
+
+<div id="menu-bottom" class="menu">
+<center>
+<ul>
+<a href="#a"> <li>Logic Stuff</li></a>
+<a href="#b"> <li>More Logic</li></a>
+<a href="#c"> <li>Fuck Logic</li></a>
+<a href="#d"> <li>Fuck The Police</li></a>
+<a href="#e"> <li>Hack The Planet</li></a>
+</ul>
+</center>
+</div>
+
+</body>
+</html>

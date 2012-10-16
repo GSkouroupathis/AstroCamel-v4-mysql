@@ -1,0 +1,43 @@
+#SERVER.PY BY GEORGE SKOUROUPATHIS
+from socket import *
+HOST = 'localhost'
+PORT = 2333
+BUFSIZ = 1024
+ADDR = (HOST, PORT)
+
+serversock = socket(AF_INET, SOCK_STREAM)
+serversock.bind(ADDR)
+serversock.listen(2)
+
+print "Awaiting connection..."
+clientsock, addr = serversock.accept()
+print "Connection from ", ADDR, "..."
+
+while 1:
+    #Recieve message length in string format
+    msglength = ''
+    chunk = ''
+    while len(msglength) < 4:
+        chunk = clientsock.recv(4)
+        msglength += chunk
+
+    #Convert msglength to an integer
+    msglength = int(msglength)
+
+    #Recieve message
+    message = ''
+    while len(message) < msglength:
+        chunk = clientsock.recv(BUFSIZ)
+        message += chunk
+
+    if message == "exit":
+        break
+    
+    print " - Client Says:"
+    print message
+
+clientsock.close()
+
+serversock.close()
+
+testword = raw_input('Connection interrupted. Press any button to exit.')

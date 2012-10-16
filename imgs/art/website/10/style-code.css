@@ -1,0 +1,75 @@
+.codecontainer {
+ height: 100px;
+ background: #CCFF99 url('torrent.gif') repeat-x;
+ margin: 0 0 5px 0;
+ border: 1px dotted #FC3;
+ overflow: auto;
+ color: #000;
+ text-decoration: none;
+}
+
+.codecontainer:hover {
+ border: 1px solid #F96;
+}
+
+.codecontainer img {
+ margin: 10px 0 0 10px;
+ float: left;
+ border: none;
+}
+
+.codecontainer img:hover {
+ margin: 8px 0 0 8px;
+ border: 2px solid #F96;
+}
+
+.codedescr {
+ height: 80px;
+ width: 524px;
+ float: right;
+ margin: 10px 10px 0 0;
+ padding: 0;
+ overflow: auto;
+}
+
+h3.program-title {
+ padding: 1px 0 1px 10px;
+ margin: 5px 0 0 0;
+ border-top: 1px dotted #FC3;
+ border-right: 1px dotted #FC3;
+ border-bottom: 1px dotted #C00;
+ border-left: 1px dotted #FC3;
+ background: #FCC;
+ color: #C00;
+}
+
+.programinaction {
+ padding: 5px;
+ margin: 0 0 15px 0;
+ border-bottom: 1px dotted #FC3;
+ border-right: 1px dotted #FC3;
+ border-left: 1px dotted #FC3;
+ overflow: auto;
+ background: #FFF;
+}
+
+h3.code-title {
+ padding: 1px 0 1px 10px;
+ margin: 5px 0 0 0;
+ border-top: 1px dotted #FC3;
+ border-right: 1px dotted #FC3;
+ border-bottom: 1px dotted #390;
+ border-left: 1px dotted #FC3;
+ background: #CFC;
+ color: #390;
+}
+
+.code {
+ padding: 5px;
+ margin: 0 0 5px 0;
+ border-bottom: 1px dotted #FC3;
+ border-right: 1px dotted #FC3;
+ border-left: 1px dotted #FC3;
+ overflow: auto;
+ background: #FFF;
+}

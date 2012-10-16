@@ -1,0 +1,90 @@
+.galsmalldiv {
+ height: 200px;
+ width: 200px;
+ background: #DDD;
+ color: #004;
+ float: left;
+ margin: 0 0 10px 10px;
+ border: 1px dotted #FC3;
+ overflow: hidden;
+}
+
+.galsmalldiv:hover {
+ border: 1px solid #F96;
+}
+
+.galsmalldiv img {
+ border: 0;
+ margin: -50px;
+ filter: alpha(opacity=80);
+ opacity: 0.8;
+}
+
+.galsmalldiv img:hover {
+ filter: alpha(opacity=100);
+ opacity: 1;
+}
+
+h2.artwork {
+ color: #F63;
+ width: 601px;
+ background: #FF9 url('heading-artwork.png') no-repeat;
+ border: 1px dotted #F96;
+ padding: 4px 0 4px 33px;
+ margin: 0 0 10px 0;
+ clear: both;
+}
+
+h2.websites {
+ color: #F63;
+ width: 601px;
+ background: #FF9 url('heading-websites.png') no-repeat;
+ border: 1px dotted #F96;
+ padding: 4px 0 4px 33px;
+ margin: 10px 0 10px 0;
+ clear: both;
+}
+
+.galsmalldiv-web {
+ height: 200px;
+ width: 200px;
+ background: #DDD;
+ color: #004;
+ float: left;
+ margin: 0 0 10px 10px;
+ border: 1px dotted #FC3;
+ overflow: hidden;
+}
+
+.galsmalldiv-web:hover {
+ border: 1px solid #F96;
+}
+
+.galsmalldiv-web img {
+ border: 0;
+ margin: -50px;
+ filter: alpha(opacity=80);
+ opacity: 0.8;
+}
+
+.galsmalldiv-web img:hover {
+ filter: alpha(opacity=100);
+ opacity: 1;
+}
+
+.galbigdiv-web {
+ height: 180px;
+ width: 392px;
+ background: #F8F8F8 url('website.gif') repeat-x;
+ color: #004;
+ float: left;
+ padding: 10px;
+ margin: 0 0 10px 10px;
+ border: 1px dotted #FC3;
+ overflow: auto;
+ font-size: 25px;
+}
+
+.galbigdiv-web:hover {
+ border: 1px solid #F96;
+}

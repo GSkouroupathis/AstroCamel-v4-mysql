@@ -1,0 +1,154 @@
+body{
+	margin: 0;
+	font-family: sans-serif;
+	font-size: 14px;
+	background: #900 url('page_bg.gif') repeat;
+}
+
+#preloader{
+	display: none;
+}
+
+#container{
+	width: 1000px;
+	margin: 30px auto 5px auto;
+
+}
+
+#header{
+	height: 150px;
+	background: url('header.png') no-repeat;
+	background-position: top left;
+}
+
+#companyinfo{
+	position: relative;
+	color: #EEE;
+	left: 790px;
+	top: 23px;
+}
+
+#main{
+	margin-top: 10px;
+	background: url('bg.png') repeat-y;
+}
+
+#menu{
+	width: 140px;
+	float: left;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	background-position: right;
+}
+
+.menulist {
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+	width: 140px;
+}
+
+.menulist li {
+	padding: 0;
+	margin: 0;
+	width: 140px;
+}
+
+.menulist li a {
+	display: block;
+	width: 125px;
+	padding: 7px 0 5px 15px;
+	margin: 0;
+	text-decoration: none;
+	color: #EEE;
+}
+
+.menulist li a:hover {
+	background: #CCC url('menuhover.jpg') repeat-y;
+	background-position: right;
+	color: #FFF;
+}
+
+#navigation {
+	margin:0;
+	paddin:0;
+}
+
+#content {
+	width: 840px;
+	padding: 45px 10px 10px 10px;
+	float: right;
+	background: url('content.png') repeat-x;
+	color: #FFF;
+}
+
+#content a:link {
+	color: #CFF;
+	text-decoration: underline;
+}
+
+#content a:hover {
+	color: #FFF;
+	text-decoration: none;
+}
+
+#leftmain {
+	width: 33%;
+	float: left;
+}
+
+#centermain {
+	width: 34%;
+	float: left;
+}
+
+#rightmain {
+	width: 33%;
+	float: right;
+}
+
+font.nameclass {
+	color: #FF9;
+}
+
+.mapimg {
+	border: 0;
+}
+
+#galimg {
+	height: 180px;
+	width: 180px;
+	background: #FC6;
+	margin: 10px 15px 10px 15px;
+	float: left;
+	overflow: hidden;
+	text-align:center;
+	filter:alpha(opacity=70);
+	opacity:0.7;
+}
+
+#galimg:hover {
+	filter:alpha(opacity=100);
+	opacity:1;
+}
+
+#galimg a img{
+	border: 0;
+}
+
+#fix {
+	clear:both;
+}
+
+#footer{
+	background: #960;
+	color: #DDD;
+	text-align: center;
+	margin-top: 10px;
+	padding: 1px 0 1px 0
+}
+
+#footer a{
+	color: #DDD;
+
+}

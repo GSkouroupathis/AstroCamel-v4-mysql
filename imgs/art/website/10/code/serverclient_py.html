@@ -1,0 +1,161 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+
+<meta http-equiv="content-type" content="text/html;charset=utf-8">
+
+<meta name="description" content="AstroCamel was brought to you to provide the internet users the opportunity to share information through the web. Use our unique features to search for torrents and download anything you want, virus-free!">
+
+<meta name="keywords" content="torrents, free, free torrents, torrent, music, pictures, movies, apps, applications, astrocamel, www.astrocamel.com, astrocamel.com, astro, camel, astro camel, astro-camel, astrocamel radio, radio, online radio">
+
+<meta name="author" content="George Skouroupathis">
+<meta name="revisit-after" content="20 days">
+<meta name="ROBOTS" content="Index, ALL">
+<meta name="ROBOTS" content="Index, FOLLOW">
+
+<title>AstroCamel.com</title>
+
+<link rel="stylesheet" type="text/css" href="../style.css" />
+<link rel="stylesheet" type="text/css" href="../style-code.css" />
+
+
+
+<link rel="shortcut icon" href="../favicon.ico">
+
+</head>
+<body>
+
+<div id="header">
+
+</div>
+
+<div id="toprocks">
+</div>
+
+<div id="main">
+	
+	<div id="menu">
+		<ul class="menulist">
+		<li><a href="../index.html">News</a></li>
+		<li><a href="../downloads.html">Downloads</a></li>
+		<li><a class="current" href="../code.html">Code</a></li>
+		<li><a href="../gallery.html">Gallery</a></li>
+		<li><a href="../contact.html">Contact</a></li>
+		</ul>
+	</div>
+	
+	<div id="content">
+
+<h3 class="code-title">CODE (server.py)</h3>
+<div class="code">
+<pre>
+#SERVER.PY BY GEORGE SKOUROUPATHIS
+from socket import *
+HOST = 'localhost'
+PORT = 2333
+BUFSIZ = 1024
+ADDR = (HOST, PORT)
+
+serversock = socket(AF_INET, SOCK_STREAM)
+serversock.bind(ADDR)
+serversock.listen(2)
+
+print "Awaiting connection..."
+clientsock, addr = serversock.accept()
+print "Connection from ", ADDR, "..."
+
+while 1:
+    #Recieve message length in string format
+    msglength = ''
+    chunk = ''
+    while len(msglength) < 4:
+        chunk = clientsock.recv(4)
+        msglength += chunk
+
+    #Convert msglength to an integer
+    msglength = int(msglength)
+
+    #Recieve message
+    message = ''
+    while len(message) < msglength:
+        chunk = clientsock.recv(BUFSIZ)
+        message += chunk
+
+    if message == "exit":
+        break
+    
+    print " - Client Says:"
+    print message
+
+clientsock.close()
+
+serversock.close()
+
+testword = raw_input('Connection interrupted. Press any button to exit.')
+</pre>
+</div>
+
+<h3 class="code-title">CODE (client.py)</h3>
+<div class="code">
+<pre>
+#CLIENT.PY BY GEORGE SKOUROUPATHIS
+from socket import *
+HOST = 'localhost'
+PORT = 2333
+BUFSIZ = 1024
+ADDR = (HOST, PORT)
+
+tcpCliSock = socket(AF_INET, SOCK_STREAM)
+tcpCliSock.connect(ADDR)
+
+print 'Type "exit" without the quotes to quit the program.'
+
+while 1:
+    #Input the message
+    message = raw_input('Type your message, client: ')
+    if message == "exit":
+        tcpCliSock.send('exit')
+        break
+    msglength = len(message)
+    #Make msglength a 4-byte string
+    if len(str(msglength)) == 1:
+            msglength = "000" + str(msglength)
+    elif len(str(msglength)) == 2:
+            msglength = "00" + str(msglength)
+    elif len(str(msglength)) == 3:
+        msglength = "0" + str(msglength)
+
+    #Part of the mesage which has been sent
+    msgsent = 0
+    #Send the length of the message in 4-digit format
+    while msgsent < 4:
+        sent = tcpCliSock.send(msglength[msgsent:])
+        msgsent += sent
+
+
+    #Part of the mesage which has been sent
+    msgsent = 0
+    #Send the message
+    while msgsent < int(msglength):
+        sent = tcpCliSock.send(message)
+        msgsent += sent
+    
+tcpCliSock.close()
+</pre>
+</div>
+
+	</div>
+
+	<div id="fix">
+	</div>
+</div>
+
+<div id="bottomrocks">
+</div>
+
+<div id="footer">
+Copyright &copy; Since 2008 - AstroCamel - Design by George Skouroupathis
+</div>
+
+</body>
+</html>

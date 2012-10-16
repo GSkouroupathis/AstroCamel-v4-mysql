@@ -1,0 +1,80 @@
+#HTS realistic challenge 6 BY GEORGE SKOUROUPATHIS
+#YOU NEED TO HAVE real6.txt and real6a.txt
+openfile1 = open('C:\Python26/programs/real6/real6.txt','r+')
+fileList = openfile1.readlines()
+newList = range(len(fileList)/3)
+index = 0
+sum = 0
+while index < len(fileList):
+    sum += int(fileList[index])
+    if (index + 1)%3 == 0:
+        newList[(index + 1) / 3 - 1] = sum
+        sum = 0
+    index += 1
+print "New List:", newList
+
+#If you want to print the output to file real6a.txt:
+#index2 = 0
+#openfile2 = open('C:\Python26/programs/real6/real6a.txt','a')
+#while index2 < len(newList):
+#    openfile2.write(str(newList[index2]) + "\n")
+#    index2 += 1
+
+
+#Make dictionary1 which stores the encrypted keys
+#and how many times show up in newList    
+dictionary1 = {}
+
+exist = 0
+index3 = 0
+while index3 < len(newList):
+    if dictionary1.has_key(newList[index3]):
+        exist = 1
+    if exist == 0:
+        dictionary1[newList[index3]] = 1
+    else:
+        dictionary1[newList[index3]] += 1
+    exist = 0
+    index3 += 1
+
+#find the most used value
+max_val = -1
+max_key = ""
+for k,v in dictionary1.iteritems():
+    if v > max_val:
+        max_val = v
+        max_key = k
+print max_key, ":", max_val
+
+inputval = "aa"
+uberNewList = []
+testtext = ""
+print "Type \"exit\", without the quotes to exit",
+print "or..."
+
+while inputval == "aa":
+    inputval = raw_input("Type which letter do you think is the most used in this text? ")
+    if inputval == "exit":
+        break
+    try:
+        diffe = max_key - ord(inputval)
+    except:
+        print "Please enter only one character"
+        inputval = "aa"
+        continue
+    print "diff = ", diffe
+    index4 = 0
+    while index4 < len(newList):
+        try:
+            uberNewList.append(chr(newList[index4] - diffe))
+        except:
+            print "Error occured"
+            break
+        testtext += uberNewList[index4]
+        index4 += 1
+    print "============== DECODED MESSAGE =============="
+    print testtext
+    print "=========== END OF DECODED MESSAGE ==========="
+    del uberNewList[:]
+    testtext = ""
+    inputval = "aa"

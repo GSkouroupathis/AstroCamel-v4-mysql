@@ -1,0 +1,85 @@
+#HTS programming challenge 1 by GEORGE SKOUROUPATHIS
+#YOU NEED TO HAVE inputlist.txt and wordlist.txt
+wordlist = []
+scrambledlist = []
+inputlist = []
+finallist = []
+
+wordlistfile = open('C:\Python26\programs\prog1/wordlist.txt', 'r+')
+wordlist_n = wordlistfile.readlines()
+for word_n in wordlist_n:
+    #put letters appart to take away \n
+    temp_list_word_n = [letter for letter in word_n]
+    if temp_list_word_n.count('\n') != 0:
+        temp_list_word_n.remove('\n')
+    #put word back together
+    temp_word = ""
+    for letter in temp_list_word_n:
+        temp_word += letter
+    wordlist.append(temp_word)
+
+for word in wordlist:
+    #put letters appart to sort them
+    temp_list_word = [letter for letter in word]
+    temp_list_word.sort()
+    #put word back together
+    temp_word = ""
+    for letter in temp_list_word:
+        temp_word += letter
+    scrambledlist.append(temp_word)
+
+print "Wordlist"
+print "---------------"
+print wordlist
+
+print "Scrambledlist"
+print "---------------"
+print scrambledlist
+
+inputfile = open('C:\Python26\programs\prog1/inputlist.txt', 'r+')
+inputlist_n = inputfile.readlines()
+for word_n in inputlist_n:
+    #put letters appart to take away \n and \t and to sort them
+    temp_list_word_n = [letter for letter in word_n]
+    if temp_list_word_n.count('\n') != 0:
+        temp_list_word_n.remove('\n')
+    if temp_list_word_n.count('\t') != 0:
+        temp_list_word_n.remove('\t')
+    temp_list_word_n.sort()
+    #put word back together
+    temp_word = ""
+    for letter in temp_list_word_n:
+        temp_word += letter
+    inputlist.append(temp_word)
+
+#remove blank lines from inputlist
+no_of_blanks = inputlist.count("")
+i = 1
+while i <= no_of_blanks:
+    inputlist.remove("")
+    i += 1
+
+print "Inputlist"
+print "---------------"
+print inputlist
+
+for word in inputlist:
+    final_word = wordlist[scrambledlist.index(word)]
+    finallist.append(final_word)
+
+print "Finallist"
+print "---------------"
+print finallist
+
+answer = ""
+for word in finallist:
+    answer += word
+    if finallist.index(word) == len(finallist) - 1:
+        break
+    answer += ","
+
+print "Answer"
+print "---------------"
+print answer
+
+testword = raw_input("(Press Enter to Quit)")

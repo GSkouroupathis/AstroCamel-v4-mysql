@@ -1,0 +1,124 @@
+body {
+	margin: 0;
+	background: #CCC url('img29.jpg');
+	background-position: center;
+	background-attachment: fixed;
+}
+
+#header {
+	width: 900px;
+	height: 100px;
+	margin: 50px auto 15px auto;
+	background: url('header.png');
+}
+
+#container {
+	width: 900px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+
+#menu {
+	width: 900px;
+	height: 30px;
+	padding-top: 20px;
+	background: url('menu1.png') repeat-x;
+}
+
+.mainmenu {
+	margin: 0;
+	padding: 0 60px 0 0;
+	width: 840px;
+	background: url('test.png') no-repeat;
+	background-position: right top;
+	height: 30px;
+}
+
+.mainmenu li {
+	display: inline;
+	font-size: 17px;
+}
+
+.mainmenu li a {
+	float: right;
+	color: #FFF;
+	margin: 0;
+	padding: 3px 15px 3px 15px;
+	height: 20px;
+	text-decoration: none;
+	border-right: 1px solid #FFF;
+	background: url('sett.png');
+}
+
+
+
+.mainmenu li a:hover, .mainmenu li .current {
+	background: url('setr.png');
+	color: #000;
+}
+
+.mainmenu li .current {
+	text-decoration: underline;
+	color: #FFF;
+}
+
+#top a:link, a:visited {
+	color: #F44;
+	text-decoration: none;
+	border-bottom: 1px dotted #F44;
+}
+
+#top a:hover{
+	color: #C30;
+	border-bottom: 0;
+}
+
+#top-decor {
+	width: 900px;
+	height: 20px;
+	margin-top: 7px;
+	margin-bottom: 7px;
+	background-image: url('decor.png');
+}
+
+#top {
+	width: 900px;
+	background: url('lol.png');
+}
+
+#topleft {
+	width: 595px;
+	float: left;
+	margin-right: 10px;
+}
+
+#topright {
+	width: 295px;
+	float: left;
+}
+
+#bottom {
+	width: 900px;
+	margin-top: 7px;
+	background: url('lol1.png');
+}
+
+#botleft {
+	width: 445px;
+	float: left;
+	margin-right: 10px;
+}
+
+#botright {
+	width: 435px;
+	padding-left: 5px;
+	padding-right: 5px;
+	float: left;
+}
+
+#fix {
+	clear: both;
+}
+
+

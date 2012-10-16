@@ -1,0 +1,27 @@
+.msgtitlecontainer {
+ background: #FFC;
+ padding: 3px 0 3px 0;
+ margin: 0;
+ border-top: 1px solid #FC3;
+ border-right: 1px solid #FC3;
+ border-left: 1px solid #FC3;
+ overflow: auto;
+ color: #000;
+}
+
+.msgcontainer {
+ height: 94px;
+ background: #CCFF99 url('torrent.gif') repeat-x;
+ padding: 3px 0 3px 0;
+ margin: 0 0 5px 0;
+ border-top: 1px solid #FC3;
+ border-right: 1px dotted #FC3;
+ border-bottom: 1px dotted #FC3;
+ border-left: 1px dotted #FC3;
+ overflow: auto;
+ color: #000;
+}
+
+.msgcontainer:hover {
+ border: 1px solid #F96;
+}

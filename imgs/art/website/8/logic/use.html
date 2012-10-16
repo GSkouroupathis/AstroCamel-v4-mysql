@@ -1,0 +1,148 @@
+<html>
+<head>
+
+<meta http-equiv="content-type" content="text/html;charset=utf-8">
+
+<meta name="description" content="Quantum Computing 1st Year Project: Quantum Logic">
+
+<meta name="author" content="George Skouroupathis">
+
+<title>Quantum Logic</title>
+
+<link rel="stylesheet" type="text/css" href="../style.css" />
+
+<link rel="icon" type="image/x-icon" href="../imgs/favicon.ico" />
+<link rel="shortcut icon" type="image/x-icon" href="../imgs/favicon.ico" />
+
+</head>
+
+<body>
+
+<div id="header">
+<h1 id="header-h1">Quantum Logic</h1>
+<span id="header-more">An insight to the quantum world</span>
+</div>
+
+<div id="container">
+
+<div id="menutop" class="menu">
+<center>
+<ul>
+<a href="../index.html" class="home">&nbsp;</a><a href="../index.html"> <li>Home</li></a>
+<a href="../mechanics/mechanics.html"> <li>Mechanics</li></a>
+<a href="../computing/computing.html"> <li>Computing</li></a>
+<a href="../logic/logicthroughtime.html" class="current"> <li>Logic</li></a>
+<a href="../asides/bvn.html"> <li>Asides</li></a>
+<a href="../references/references.html"> <li>References</li></a>
+<a href="../faqs/faqs.html"> <li>FAQs</li></a>
+</ul>
+</center>
+</div>
+
+<div id="jumpto">
+<a href="logicthroughtime.html">Logic Through Time</a><a href="originmotivation.html">Q.Logic Origin and Motivation</a><a href="definition.html">Q.Logic Definition</a><a href="differences.html">Quantum Vs Classical</a><a href="use.html" class="selected-sub">Use of Q.Logic</a></div>
+
+<div id="main">
+<!-- Research goes here -->
+<h3>Use of Quantum Logic</h3>
+
+<p>This page describes some areas in computing in which quantum logic has been successfully applied.</p>
+
+
+<h4><u>Game semantics</u></h4>
+
+<p><u>Dialogical Logic</u>
+<br/>
+Dialogical logic is widely used in game theory. It has its roots in ancient Greece where Greek philosophers conceived the idea of two parties arguing with dialogues over a certain issue. In modern days, the first one to introduce game semantics for logic was Paul Lorenzen in the 1950s. Kuno Lorenz was the one who took over after Lorenzen and further developed game semantics. Today, game semantics evolved into combining game theory in order to provide semantics for various logical systems.</p>
+
+<p>For example, if two parties argue about a certain issue, the first party makes an <i>attack</i> and the second responses with a <i>defence</i>. This attack-defence action is called a round. After the round, a certain result can be deduced about the issue the two parties were arguing about, by using the attack and defence translated into logical statements. The more arguments, the two parties present, the more complex the outcome is going to be.</p>
+
+<p><u>Example</u><br />
+This is a very simple example, where <b>A</b> represents the first party and <b>B</b> the second one. Note that the table used does not contain all the columns required for a game; this is just a simple demonstration.</p>
+
+<center>
+<table border="1">
+<tr>
+<td>Step</td><td>A</td><td>Step</td><td>B</td>
+</tr>
+<tr>
+<td>2</td><td>(x V y)</td><td>1</td><td>(x V y) → x</td>
+</tr>
+<tr>
+<td>4</td><td>y</td><td>3</td><td>? Step 2</td>
+</tr>
+</table>
+</center>
+
+<p>The proposition y was proven in an earlier part to hold.</p>
+
+<p><u>Explanation (by step)</u>
+<ol>
+ <li><b>B</b> proposes that (x V y) → x</li>
+ <li><b>A</b> proposes that (x V y)</li>
+ <li><b>B</b> asks <b>A</b> to reason about its statement at Step 2</li>
+ <li><b>A</b> finishes the game by saying that y holds, therefore x V y (his statement at step 2) holds as well. <b>B</b> has nothing to attack or defend</li>
+</ol>
+
+<p>We thus see that dialogical logic uses algorithms to give the best possible answers to logic questions in order to prove that a logical statement stands, or in a long term, simulate the whole operation of the logical system.</p>
+
+<p><u>Quantum Game Theory</u></p>
+As in classical logic, game theory has been developed using quantum logic. It is basically the extension of classical game theory in a quantum system, using the rules of quantum mechanics.</p>
+
+<p><u>Example of a logic game</u></p>
+One of the most famous logic games is the prisoner's dilemma. In this game the two players take the place of two criminals that have been arrested by the police. Each of them can cooperate with his partner, or defect, without knowing what the other is going to do. They get more years in prison depending not only on their action, but on their partner's action. More specifically, if prisoner A defects and prisoner B remains silent (cooperates with A) then A is released and B gets the full sentence. If both cooperate then they both get a low sentence. If both defect and betray each other then they both get a medium sentence.
+
+<p>Many people have been researching how quantum strategies can help in the improvement of the outcome of a game. There are three main differences between quantum and classical strategies:</p>
+
+<p><b>1. Superposed initial states</b><br />
+Imagine how in the classical version of the Prisoner's Dilemma game described above, each player sends his choice (cooperate/defect) represented by a bit of value 1 or 0. In the quantum version of the game, the player sends his choice represented by a qubit. A qubit has the value of the superposition of the two values representing the two player's choices. After a measurement is made in that qubit, its value collapses from the superposed value to one of the two values representing the player's choices.</p>
+
+<p><b>2. Quantum entanglement of initial states</b><br />
+Each player at the start of each round receives a set of qubits which represent the current state of the quantum system. This set might be entangled. This means that any change made on one of the qubits may affect the other qubit, which will result in giving a different outcome at the final stage of the round.</p>
+
+<p><b>3. Superposition of strategies to be used in the initial states</b><br />
+Each player at the beginning of a round has the power not only to select between 1 or 0 as his input to the system, but to actually set the value of his qubit to be a superposition of the values of his initial choices. This way the probability of selection of each strategy varies.</p>
+
+<p>In short, in the quantum version of the game, a player can both cooperate AND defect at the same time due to superposition of qubits. Also, due to entanglement, each choice a player makes affects the choice of the second player.</p>
+
+<h4><u>Logic gates</u></h4>
+
+<p>Quantum logic gates are used to build quantum circuits. These gates, which are similar to the gates used in classical computers, must be reversible, i.e. their output state must be capable of recovering the original input state.</p>
+
+<p>An example of quantum gates is the controlled-NOT gate, or C-NOT gate for short. This gate performs the following function: if the control qubit is 0 then the target qubit is unchanged. Otherwise if the control qubit is 1 then the target qubit flips its value (1 -> 0 and 0 -> 1).</p>
+
+<p>Recently, IBM has managed to build a C-NOT gate which has a 95% accuracy rate, an important improvement from the previous rate of 81%.</p>
+
+<h4><u>Legacy of quantum logic – its most important use</h4></u>
+
+<p>So what can we learn from the development of quantum logic? Is this form of logic just a set of rules to describe mathematically quantum systems? Or does it teach us something more fundamental?</p>
+
+<p>The truth is that quantum logic has given humanity something more important than a new set of calculus, new kinds of logic gates or improvements in game semantics. What quantum logic has accomplished is to challenge at a fundamental level our understanding of the world. No matter how many axioms we prove in classical logic, how much we want distributivity to hold or how much we would like to prove the truthfulness of a proposition just by showing that its negation does not hold, we cannot say that these rules stand in the world. Our world is not classical. If we want to be realistic, we should only use the principles that hold in our own world.</p>
+
+<p>Let’s consider for example distributivity. Quantum logic does not say that distributivity is invalid in quantum mechanics; it says that it is not valid in general. It is a logical mistake, and any argument based on this law is not logically valid anywhere.</p>
+
+</div>
+
+<div id="nextprev">
+<span id="previous"><a href="differences.html">&#171; Previous</a></span>
+<span id="next"><a href="../asides/bvn.html">Next &#187;</a></span>
+</div>
+
+<div id="menu-bottom" class="menu">
+<center>
+<ul>
+<a href="../index.html" class="home">&nbsp;</a><a href="../index.html"> <li>Home</li></a>
+<a href="../mechanics/mechanics.html"> <li>Mechanics</li></a>
+<a href="../computing/computing.html"> <li>Computing</li></a>
+<a href="../logic/logicthroughtime.html" class="current"> <li>Logic</li></a>
+<a href="../asides/bvn.html"> <li>Asides</li></a>
+<a href="../references/references.html"> <li>References</li></a>
+<a href="../faqs/faqs.html"> <li>FAQs</li></a>
+</ul>
+</center>
+</div>
+
+</div>
+
+</body>
+</html>

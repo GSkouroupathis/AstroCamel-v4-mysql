@@ -1,0 +1,273 @@
+body {
+  margin: 0;
+  padding: 0;
+  background: #000;
+  font-family: sans-serif;
+  font-size: 16px;
+}
+
+#header {
+  height: 80px;
+  width: 70%;
+  margin: 1% auto auto auto;
+  padding: 0;
+  border: 2px solid #DDD;
+  background: #000 url('imgs/header.jpg');
+  background-repeat: no-repeat;
+  color: #FFF;
+}
+
+#header h1 {
+  margin: 0;
+  padding: 0;
+  position: relative;
+  top: 13px;
+  left: 10px;
+}
+
+#header span {
+  margin: 0;
+  padding: 0;
+  position: relative;
+  top: 7px;
+  left: 25px;
+}
+
+#container {
+  width: 70%;
+  margin: 1% auto 25px auto;
+  padding: 0;
+  border: 2px solid #DDD;
+  background: #FFF;
+}
+
+.menu {
+  margin: 0;
+  padding: 0;
+  background: #000;
+}
+
+.menu ul {
+  margin: 0;
+  padding: 0;
+}
+
+.menu ul li {
+  list-style:none;
+}
+
+.menu a:link {
+  margin: 0;
+  padding: 10px;
+  display: inline-block;
+  background: #000;
+  color: #FFF;
+  text-decoration: none;
+}
+
+.menu a:visited {
+  margin: 0;
+  padding: 10px;
+  display: inline-block;
+  background: #000;
+  color: #FFF;
+  text-decoration: none;
+}
+
+.menu a.current {
+  background: #FFF url('imgs/menu-button-current.png') repeat-x;
+  color: #000;
+  text-decoration: none;
+}
+
+.menu a.home {
+  background: #000 url('imgs/nothome.png') no-repeat;
+  background-position: 1px 8px; 
+}
+
+.menu a.home:hover {
+  background: #000 url('imgs/nothome.png') no-repeat;
+  background-position: 1px 8px; 
+}
+
+.menu a.currenthome {
+  background: #000 url('imgs/home.png') no-repeat;
+  background-position: 1px 8px; 
+}
+
+.menu a.currenthome:hover {
+  background: #000 url('imgs/home.png') no-repeat;
+  background-position: 1px 8px; 
+}
+
+.menu a.current:hover {
+  background: #FFF url('imgs/menu-button-current.png') repeat-x;
+  color: #000;
+}
+
+.menu a:hover {
+  background: #FFF url('imgs/menu-button.png') repeat-x;
+  color: #000;
+}
+
+#jumpto {
+  padding: 10px 0 3px 7px;
+  margin-top: 10px;
+  background: #FFF;
+  border-bottom: 1px dotted #000;
+  text-align: center;
+}
+
+#jumpto a {
+  padding: 6px 3px 3px 3px;
+  border-top: 1px dotted #300;
+  border-right: 1px dotted #300;
+  border-left: 1px dotted #300;
+  margin: 0 3px 0 3px;
+  color: #633;
+  text-decoration: none;
+}
+
+#jumpto a:hover {
+  background: #FEE;
+  color: #522;
+}
+
+#jumpto a.selected-sub {
+  border: 1px solid #300;
+  background: #FEE;
+  color: #300;
+}
+
+#jumpto a.selected-sub:hover {
+  border: 1px solid #300;
+  background: #FEE;
+  color: #300;
+}
+
+#main {
+  padding: 10px;
+}
+
+#main h3 {
+  height: 23px;
+  padding: 1px 0 0 7px;
+  margin:10px 0 10px 0;
+  background: #FEE;
+  color: #300;
+  border: 1px dashed #200;
+  border-left: 3px solid #300;
+}
+
+#main p {
+  text-align: justify;
+}
+
+#main ul li {
+  list-style-type: disc;
+}
+
+#main ul.names li {
+  list-style-type: none;
+}
+
+#main a:link, a:visited {
+  color: #F66;
+  text-decoration: none;
+}
+
+#main a:hover {
+  color: #844;
+  text-decoration: underline;
+}
+
+#nextprev {
+  height: 23px;
+  margin: 0 10px 18px 10px;
+  padding: 1px 0 0 7px;
+  background: #FEE;
+  color: #300;
+  border: 1px dashed #200;
+  border-right: 3px solid #300;
+}
+
+#previous {
+  position: relative;
+  top: 2px;
+}
+
+#previous a:link {
+  color: #300;
+  text-decoration: none;
+}
+
+#previous a:visited {
+  color: #300;
+  text-decoration: none;
+}
+
+#previous a:hover {
+  text-decoration: underline;
+}
+
+#next {
+  float: right;
+  position: relative;
+  top: 2px;
+  left: -8px;
+}
+
+#next a:link {
+  color: #300;
+  text-decoration: none;
+}
+
+#next a:visited {
+  color: #300;
+  text-decoration: none;
+}
+
+#next a:hover {
+  text-decoration: underline;
+}
+
+#menu-bottom {
+  margin: 0
+}
+
+#menu-bottom a:hover {
+  background: #FFF url('imgs/menu-button-2.png') repeat-x;
+  background-position: bottom;
+}
+
+#menu-bottom a.current {
+  background: #FFF url('imgs/menu-button-current-2.png') repeat-x;
+  background-position: bottom;
+}
+
+#menu-bottom a.current:hover {
+  background: #FFF url('imgs/menu-button-current-2.png') repeat-x;
+  background-position: bottom;
+}
+
+#menu-bottom a.home {
+  background: #000 url('imgs/nothome.png') no-repeat;
+  background-position: 1px 8px; 
+}
+
+#menu-bottom a.home:hover {
+  background: #000 url('imgs/nothome.png') no-repeat;
+  background-position: 1px 8px;
+}
+
+#menu-bottom a.currenthome:hover {
+  background: #000 url('imgs/home.png') no-repeat;
+  background-position: 1px 8px; 
+}
+
+#menu-bottom a.currenthome: {
+  background: #000 url('imgs/home.png') no-repeat;
+  background-position: 1px 8px; 
+}
+
+

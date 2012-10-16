@@ -1,0 +1,113 @@
+# robots.txt file for AstroCamel(C)
+# Disobeying the rules of the robots.txt will caused your IP to be banned.
+#-------------------------------------------------------------------------------
+User-agent: Mediapartners-Google*
+Disallow:
+
+User-agent: b2w/0.1
+Disallow: /
+
+User-agent: BotRightHere
+Disallow: /
+
+User-agent: Download Ninja
+Disallow: /
+
+User-agent: EmailCollector
+Disallow: /
+
+User-agent: EmailSiphon
+Disallow: /
+
+User-agent: EmailWolf
+Disallow: /
+
+User-agent: ExtractorPro
+Disallow: /
+
+User-agent: Fetch
+Disallow: /
+
+User-agent: grub-client
+Disallow: /
+
+User-agent: HTTrack
+Disallow: /
+
+User-agent: ieautodiscovery
+Disallow: /
+
+User-agent: k2spider
+Disallow: /
+
+User-agent: larbin
+Disallow: /
+
+User-agent: libwww
+Disallow: /
+
+User-agent: linko
+Disallow: /
+
+User-agent: Microsoft.URL.Control
+Disallow: /
+
+User-agent: MSIECrawler
+Disallow: /
+
+User-agent: NPBot
+Disallow: /
+
+User-agent: Offline Explorer
+Disallow: /
+
+User-agent: ProWebWalker
+Disallow: /
+
+User-agent: sitecheck.internetseer.com
+Disallow: /
+
+User-agent: SiteSnagger
+Disallow: /
+
+User-agent: Teleport
+Disallow: /
+
+User-agent: TeleportPro
+Disallow: /
+
+User-agent: Teleport Pro/1.29
+Disallow: /
+
+User-agent: Telesoft
+Disallow: /
+
+User-agent: WebBandit
+Disallow: /
+
+User-agent: WebCopier
+Disallow: /
+
+User-agent: WebCopier v4.0
+Disallow: /
+
+User-agent: Web Downloader/6.9
+Disallow: /
+
+User-agent: WebReaper
+Disallow: /
+
+User-agent: WebStripper
+Disallow: /
+
+User-agent: WebZip
+Disallow: /
+
+User-agent: WebZip/4.0
+Disallow: /
+
+User-agent: wget
+Disallow: /
+
+User-agent: ZyBORG
+Disallow: /

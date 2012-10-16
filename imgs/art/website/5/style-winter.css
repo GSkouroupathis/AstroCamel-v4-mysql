@@ -1,0 +1,229 @@
+body {
+ min-width: 775px;
+ text-align: center;
+ background: url('images/wi-background.png') repeat-x;
+}
+
+#hidden-stuff {
+ display: none;
+}
+
+#left a:link, a:visited, a:active {
+ color: #00F;
+ text-decoration: underline;
+}
+
+#left a:hover {
+ color: #00F;
+ text-decoration: none;
+}
+
+.torstuff a:link, a:visited, a:active {
+ color: #00F;
+ text-decoration: underline;
+}
+
+.torstuff a:hover {
+ color: #00F;
+ text-decoration: none;
+}
+
+#allstuff {
+ width: 775px;
+ position: relative;
+ margin: 0 auto;
+ text-align: left;
+}
+
+#header {
+ clear: both;
+ width: 775px;
+ height: 100px;
+ background: url('images/wi-head-back.png');
+}
+
+#header img {
+ margin: 2px 0 auto 0;
+}
+
+#main {
+ padding: 0;
+ width: 740px;
+ margin-left: 18px;
+}
+
+#left-stuff {
+ margin: 8px 0;
+ padding: 0;
+ width: 580px;
+ float: left;
+
+}
+
+#left {
+ text-align: justify;
+ border-left: 1px solid #000;
+ border-right: 1px solid #000;
+ margin: 0;
+ padding: 3px;
+ width: 572px;
+ float: left;
+ background-color: #FFF;
+}
+
+.lefttopfix {
+ width: 580px;
+ height: 10px;
+ padding: 0;
+ margin: 0;
+ background: url('images/lefttopfix.png');
+ float: left;
+}
+
+.leftbotfix {
+ width: 580px;
+ height: 10px;
+ padding: 0;
+ margin: 0 0 8px 0;
+ background: url('images/leftbotfix.png');
+ float: left;
+}
+
+#right-stuff {
+ margin: 8px 0;
+ padding: 0;
+ width: 150px;
+ float: right;
+
+}
+
+#right {
+ padding: 0;
+ background-color: #F8F8F8;
+ border: 1px solid #000;
+ margin: 0 0 8px 0;
+ width: 148px;
+ background-color: #FFF;
+}
+
+.torinfo {
+ border: 0;
+ float: right;
+ margin: 0;
+ padding: 0;
+ height: 100px;
+ background-color: #00FF00;
+ position: relative;
+ top: -110px;
+ width: 122px;
+}
+
+.menulist {
+list-style-type: none;
+margin: 1px 0 3px 0;
+padding: 0;
+width: 148px;
+}
+
+.menulist li {
+ padding: 0;
+ margin: 0;
+ width: 148px;
+}
+
+.menulist li a {
+ background-color: #F8F8F8;
+ display: block;
+ width: 138px;
+ padding: 2px 0;
+ padding-left: 10px;
+ margin: 0;
+ text-decoration: none;
+}
+
+.menulist li a:hover {
+ background: #e0e3ff url('images/menuback-winter.png') repeat-x;
+ background-position:right;
+ text-decoration: underline;
+}
+
+.menulist li a:visited, .menulist li a:active{
+color: #00F;
+}
+
+#footer {
+ margin: 10px 0 0 0;
+ clear: both;
+ width: 775px;
+ height: 50px;
+ background: url('images/wi-foot-back.png');
+}
+
+.footer_stuff{
+ margin: 0;
+ position: absolute;
+ color: #FFF;
+ bottom: -16px;
+ left: 12px;
+ width: 100%;
+ height: 50px;
+ text-align: left;
+}
+
+h3 {
+ margin: 0;
+ padding: 0;
+}
+
+.torimgdiv {
+ margin: 0 0 10px 0;
+ padding: 0;
+ border: 0;
+ border-right: 1px solid #000;
+ width: 80px;
+ height: 100px;
+ background: URL('images/wi-back1.png');
+ float: left;
+}
+
+.torstuff {
+ margin: 0 0 10px 0;
+ padding: 0;
+ border: 0;
+ width: 370px;
+ height: 100px;
+ float: left;
+ background: URL('images/wi-back1.png');
+ background-attachment: scroll;
+ overflow-y: auto;
+}
+
+#apps, #music, #movies, #pictures, #other {
+ border-left: 1px solid #000;
+ border-right: 1px solid #000;
+ margin: 0;
+ background-color: #FFF;
+ padding: 0;
+ width: 578px;
+ float: left;
+}
+
+.torimg {
+ height: 78px;
+ width: 78px;
+ background-color: 0F0;
+ border: 1px solid black;
+ float: left;
+ padding: 0;
+ margin: 9px 0 9px 0;
+}
+
+.torrate {
+ margin: 0 0 10px 0;
+ padding: 0;
+ border-left: 1px solid #400000;
+ width: 126px;
+ height: 100px;
+ background: URL('images/wi-back1.png');
+ float: left;
+}

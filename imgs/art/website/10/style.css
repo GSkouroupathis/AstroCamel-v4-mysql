@@ -1,0 +1,151 @@
+body {
+ margin:0;
+ font-family: sans-serif;
+ font-size: 14px;
+ background: #FFFF99 url('bg.gif');
+ background-repeat: repeat-x;
+ background-attachment: scroll;
+}
+ 
+#header {
+ width: 950px;
+ background: url('header.png');
+ margin-left: auto;
+ margin-right: auto;
+ margin-top: 0;
+ height: 160px;
+}
+ 
+#toprocks {
+ width: 850px;
+ height: 50px;
+ margin-left: auto;
+ margin-right: auto;
+ margin-top: 7px;
+ background:  url('toprocks.png');
+}
+
+#main {
+ margin: 0;
+ padding: 0;
+ width: 798px;
+ background: url('image.png');
+ margin-left: auto;
+ margin-right: auto;
+ border-top: 2px solid #636363;
+ border-bottom: 1px solid #636363;
+ border-right: 1px solid #CCC;
+ border-left: 1px solid #CCC;
+}
+ 
+#menu {
+ font-family: "Berlin Sans FB";
+ font-size: 16px;
+ width: 140px;
+ float: left;
+ padding-top: 10px;
+ padding-bottom: 10px;
+}
+ 
+.menulist {
+ list-style-type: none;
+ margin: 0;
+ padding: 0;
+ width: 140px;
+}
+
+.menulist li {
+ padding: 0;
+ margin: 0;
+ width: 140px;
+}
+
+.menulist li a {
+ display: block;
+ width: 125px;
+ padding: 7px 0 5px 15px;
+ margin: 0;
+ text-decoration: none;
+ color: #333;
+}
+
+.menulist li a:hover {
+ background: #f9e9b7 url('dot.png') repeat-y;
+ color: #F96;
+}
+
+.menulist li a.current {
+ background: #F9e9b7 url('dot.png') repeat-y;
+ color: #F63;
+}
+ 
+#content {
+ width: 638px;
+ padding: 10px;
+ float: right;
+}
+
+#content a:link, a:visited {
+ color: #930;
+ text-decoration: none;
+ border-bottom: 1px dotted #F96;
+}
+
+#content a:hover {
+ color: #F96;
+ border-bottom: 1px dotted #F63;
+}
+
+input {
+ padding: 2px;
+ border: 1px dotted #FC3;
+}
+
+input:hover {
+ border: 1px dashed #F93;
+}
+
+input:focus {
+ border: 1px solid #F90;
+ background: #FF9;
+}
+
+input#submit {
+ background: #FFC url('submit1.png') repeat-x;
+ border: 1px solid #000;
+}
+
+input#submit:hover {
+ background: #FFC url('submit2.png');
+}
+
+input#submit:focus {
+ background: #FFC;
+}
+
+#bottomrocks {
+ width: 850px;
+ height: 50px;
+ margin-left: auto;
+ margin-right: auto;
+ margin-bottom: 20px;
+ background: #328943;
+ background:  url('bottomrocks.png');
+ clear: both;
+}
+ 
+#fix {
+ clear:both;
+}
+ 
+#footer {
+ clear: both;
+ width: 800px;
+ background: #ecd486;
+ font-size: 80%;
+ color: #050505;
+ margin-left: auto;
+ margin-right: auto;
+ margin-bottom: 10px;
+ text-align: center;
+}

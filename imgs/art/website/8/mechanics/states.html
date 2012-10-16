@@ -1,0 +1,148 @@
+<html>
+<head>
+
+<meta http-equiv="content-type" content="text/html;charset=utf-8">
+
+<meta name="description" content="Quantum Computing 1st Year Project: Quantum Logic">
+
+<meta name="author" content="George Skouroupathis">
+
+<title>Quantum Logic</title>
+
+<link rel="stylesheet" type="text/css" href="../style.css" />
+
+<link rel="icon" type="image/x-icon" href="../imgs/favicon.ico" />
+<link rel="shortcut icon" type="image/x-icon" href="../imgs/favicon.ico" />
+
+</head>
+
+<body>
+
+<div id="header">
+<h1 id="header-h1">Quantum Logic</h1>
+<span id="header-more">An insight to the quantum world</span>
+</div>
+
+<div id="container">
+
+<div id="menutop" class="menu">
+<center>
+<ul>
+<a href="../index.html" class="home">&nbsp;</a><a href="../index.html"> <li>Home</li></a>
+<a href="../mechanics/mechanics.html" class="current"> <li>Mechanics</li></a>
+<a href="../computing/computing.html"> <li>Computing</li></a>
+<a href="../logic/logicthroughtime.html"> <li>Logic</li></a>
+<a href="../asides/bvn.html"> <li>Asides</li></a>
+<a href="../references/references.html"> <li>References</li></a>
+<a href="../faqs/faqs.html"> <li>FAQs</li></a>
+</ul>
+</center>
+</div>
+
+<div id="jumpto">
+<a href="mechanics.html">Theory</a><a href="states.html" class="selected-sub">States</a>
+</div>
+
+<div id="main">
+<!-- Research goes here -->
+<h3>Quantum States</h3>
+
+
+<p>Quantum mechanics declare that particles can be in different &#39;states&#39;. But what do we mean by 
+quantum states and how do we use them to explain the results from the experiments? What follows is a set 
+of definitions and mathematical representations related to quantum mechanics.</p>
+
+<p><b>State:</b> a physical situation of a particle or any other quantum piece of the world (system). It is represented by the Ket notation:<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;				| STATE_LABEL &#62;<br />
+Some properties like the inner product of two states are represented by the Bra-Ket notation. Eg:<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;		&#60; A | B &#62;     is the inner product or state | A &#62;   with   state | B &#62;</p>
+
+<p><b>Basis state:</b> a definite state which describes one possible result of some measurement.</p>
+
+<p><b>Superposition:</b> the idea that a quantum system exists in all its basis states at the same time.
+ When a measurement occurs it adopts the state of just one of its basis states. E.g.: <br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;			| SUPERPOSITION &#62;   = a | 0 &#62;   +   b | 1 &#62;<br />
+  where a and b are complex numbers representing the amplitudes of the waves of each state. 
+  Each basis state has an associated probability of becoming the definite state of the system, equal to |amplitude|2.</p>
+
+<p><b>Rule of superposition:</b> the superposition of some quantum states is also a quantum state.</p>
+
+<p><b>Observables:</b> variables that a particle has like position, momentum and energy. When measured 
+these variables portray the quantum state of the particle. Observables are represented mathematically
+ by operators which act on the Hilbert space.</p>
+
+<p><b>Observation space:</b> the set of all possible values an observable can take as a result of an experiment.</p>
+
+<p><b>Measurement:</b> the process of determining whether a quantum system satisfies some property
+ (eg. regarding its position). There are two rules associated with measurement:
+<ul>
+<li>If no measurement occurs on a quantum system then the state of the system changes 
+non-probabilistically (i.e. in a definite way). The new state preserves any superposition.</li>         
+<li>In case of a measurement involved, the state is updated randomly according to the
+ probabilities of each basis state. The new state is what we see as the result of the measurement.</li>
+</ul>
+
+<p><b>Wave function, &#968;:</b> a mathematical function which describes the state of a quantum system.
+ When someone observes a quantum system (i.e. when someone makes a measurement) the wave function 
+ &#39;collapses&#39; and the uncertain state of the system is replaced by a definite one
+ (one of its basis states). The other states present in the initial state of superposition are
+ all gone; we cannot use them to make a different measurement.</p>
+
+<p>We will an example to illustrate this important side effect of measurement. 
+Suppose we have a light source, two beam splitters, two full mirrors and two 
+photon detectors in the configuration shown below. When a photon meets a beam 
+splitter it has a 50% chance to get reflected and 50% to pass through, whereas 
+when it meets a full mirror it is definitely reflected.</p>
+
+<center>
+<img src="../imgs/states.png" />
+<br />
+Source: Phillip Kaye, &#34;An introduction to quantum computing&#34;, Oxford university press, p.16
+</center>
+
+<p>The state of a photon emitted by the light source is:<br />
+|photon &#62; =       1/&radic;2 | upper &#62;   +   1/&radic;2 | lower &#62;<br />
+    where upper (1) and lower (0) represent the two different paths that the photon can take, each with probability equal to half.</p>
+
+<p>Suppose now that we make a measurement to find out the actual path that the photon takes. 
+We place the measuring device in the upper path. If we find the photon there, the state of 
+the photon reduces from the initial state of superposition to the definite basis state | upper&#62;,
+ since we are 100% sure that the upper path was chosen. If we don&#39;t find the photon there, then 
+ it must have travelled in the lower path in which case its state now is |lower&#62;. In either case,
+ the measurement we made on the system destroyed the state the photon had in the beginning.</p>
+
+<b>Entanglement:</b>
+<br />
+<p>A pair of quantum particles collectively forms a simple state, where each 
+particle has also a state of its own, or an entangled state, where neither 
+particle has a state of its own. The theory of entanglement tells us that the
+ particles in any entangled state can instantaneously affect each other, even 
+ if the distances between them are very big. In particular, when a measurement 
+ is made to one of these particles causing it to take a definite state, the other
+ particle will take a correlated definite state as well.</p>
+
+</div>
+
+<div id="nextprev">
+<span id="previous"><a href="mechanics.html">&#171; Previous</a></span>
+<span id="next"><a href="../computing/computing.html">Next &#187;</a></span>
+</div>
+
+<div id="menu-bottom" class="menu">
+<center>
+<ul>
+<a href="../index.html" class="home">&nbsp;</a><a href="../index.html"> <li>Home</li></a>
+<a href="../mechanics/mechanics.html" class="current"> <li>Mechanics</li></a>
+<a href="../computing/computing.html"> <li>Computing</li></a>
+<a href="../logic/logicthroughtime.html"> <li>Logic</li></a>
+<a href="../asides/bvn.html"> <li>Asides</li></a>
+<a href="../references/references.html"> <li>References</li></a>
+<a href="../faqs/faqs.html"> <li>FAQs</li></a>
+</ul>
+</center>
+</div>
+
+</div>
+
+</body>
+</html>

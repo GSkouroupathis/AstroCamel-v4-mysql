@@ -1,0 +1,75 @@
+#contactform {
+ margin-top: 30px;
+}
+
+/*Width should be 311*/
+label {
+ display: block;
+ float: left;
+ width: 312px;
+ height: 17px;
+ text-align: right;
+ background: #FFC;
+ margin: 0 1px 10px 0;
+ padding: 2px;
+ border: 1px dotted #FC3;
+}
+
+label#commentslabel {
+ width: 632px;
+ text-align: center;
+ margin: 0 0 1px 0;
+}
+
+input {
+ float: left;
+ width: 313px;
+ height: 17px;
+ margin: 0 0 10px 0;
+ padding: 2px;
+ border: 1px dotted #FC3;
+}
+
+input:hover {
+ border: 1px dashed #F93;
+}
+
+input:focus {
+ border: 1px solid #F90;
+ background: #FF9;
+}
+
+input#submit {
+ float: left;
+ background: #FFC url('submit1.png') repeat-x;
+ width: 236px;
+ height: 25px;
+ margin: 30px auto 30px 200px;
+ border: 1px solid #000;
+}
+
+input#submit:hover {
+ background: #FFC url('submit2.png');
+}
+
+input#submit:focus {
+ background: #FFC;
+}
+
+textarea {
+ float: left;
+ width: 632px;
+ height: 100px;
+ margin: 0 0 10px 0;
+ padding: 2px;
+ border: 1px dotted #FC3;
+}
+
+textarea:hover {
+ border: 1px dashed #F93;
+}
+
+textarea:focus {
+ border: 1px solid #F90;
+ background: #FF9;
+}

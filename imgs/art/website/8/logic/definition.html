@@ -1,0 +1,108 @@
+<html>
+<head>
+
+<meta http-equiv="content-type" content="text/html;charset=utf-8">
+
+<meta name="description" content="Quantum Computing 1st Year Project: Quantum Logic">
+
+<meta name="author" content="George Skouroupathis">
+
+<title>Quantum Logic</title>
+
+<link rel="stylesheet" type="text/css" href="../style.css" />
+
+<link rel="icon" type="image/x-icon" href="../imgs/favicon.ico" />
+<link rel="shortcut icon" type="image/x-icon" href="../imgs/favicon.ico" />
+
+</head>
+
+<body>
+
+<div id="header">
+<h1 id="header-h1">Quantum Logic</h1>
+<span id="header-more">An insight to the quantum world</span>
+</div>
+
+<div id="container">
+
+<div id="menutop" class="menu">
+<center>
+<ul>
+<a href="../index.html" class="home">&nbsp;</a><a href="../index.html"> <li>Home</li></a>
+<a href="../mechanics/mechanics.html"> <li>Mechanics</li></a>
+<a href="../computing/computing.html"> <li>Computing</li></a>
+<a href="../logic/logicthroughtime.html" class="current"> <li>Logic</li></a>
+<a href="../asides/bvn.html"> <li>Asides</li></a>
+<a href="../references/references.html"> <li>References</li></a>
+<a href="../faqs/faqs.html"> <li>FAQs</li></a>
+</ul>
+</center>
+</div>
+
+<div id="jumpto">
+<a href="logicthroughtime.html">Logic Through Time</a><a href="originmotivation.html">Q.Logic Origin and Motivation</a><a href="definition.html" class="selected-sub">Q.Logic Definition</a><a href="differences.html">Quantum Vs Classical</a><a href="use.html">Use of Q.Logic</a></div>
+
+
+<div id="main">
+<!-- Research goes here -->
+<h3>Quantum logic: Definition</h3>
+
+<b>What is quantum logic?</b>
+
+<p>Quantum logic is a set of rules that allows us to reason about propositions in a quantum context. These rules, unlike the rules of classical logic, take the 
+principles of quantum theory into consideration.</p>
+
+<p>But first of all, what do propositions have to do with the rules of quantum mechanics? What do we mean by the phrase &#34;a formula A holds?&#34; The answer is: <b>a physical 
+measurement about a quantity A which results in the value &mu; asserts that the proposition A = &mu; is true.</b> This is an important connection between physics and logic; 
+making a measurement is analogous to asserting a corresponding proposition.</p>  
+
+<p>In quantum mechanics the state of a system is determined by its wave function. According to Birkhoff and von Neumann the state should thus be represented by a 
+function / phase space, namely the Hilbert space (an infinite-dimensional vector space with an inner product). Every proposition in logic is then associated with 
+a closed subspace of the Hilbert space; we say that the proposition is projected onto this space. The truth value of the proposition is determined by the eigenvalues 
+of its projector on that space.</p>
+
+<p>The collection of all projectors on the Hilbert space forms a specific lattice on which the operators join (U), meet (&cap;) and complement (&perp;) correspond to the 
+logical connectives disjunction (V), conjunction (&and;) and negation (~) respectively.</p>
+
+<p>One of the most important aspects of quantum logic is the failure of the classical distributive law. Because of this, a weaker version of the distributive 
+law (called the modular law) was developed to take the place of its classical predecessor.</p>
+
+<p>When using quantum logic to make inferences, one must be extremely careful on how he uses the specified propositions. Consider this simple example in natural 
+deduction:</p>
+
+<ul>
+	<li>A     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  &nbsp;&nbsp;&nbsp;&nbsp;           given
+	<li>B          &nbsp;&nbsp;&nbsp;&nbsp;   &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;    given
+	<li>C            &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;   &nbsp;&nbsp;&nbsp;&nbsp;  given
+	<li>A &and; B        &nbsp;&nbsp;&nbsp;&nbsp;   &and;I (1,2)
+</ul>
+
+<p>In classical logic the above example would be perfectly OK: in any system where the propositions A, B and C hold we can deduce that A &and; B holds. In quantum logic 
+however, if we want to deduce the same conclusion then we must consider the extra assumption that there exist no uncertainty relations between A, B and C 
+(i.e. knowing B for example does not invalidate what we previously knew about A). Such differences with classical logic are explained in the next page.</p>
+
+</div>
+
+<div id="nextprev">
+<span id="previous"><a href="originmotivation.html">&#171; Previous</a></span>
+<span id="next"><a href="differences.html">Next &#187;</a></span>
+</div>
+
+<div id="menu-bottom" class="menu">
+<center>
+<ul>
+<a href="../index.html" class="home">&nbsp;</a><a href="../index.html"> <li>Home</li></a>
+<a href="../mechanics/mechanics.html"> <li>Mechanics</li></a>
+<a href="../computing/computing.html"> <li>Computing</li></a>
+<a href="../logic/logicthroughtime.html" class="current"> <li>Logic</li></a>
+<a href="../asides/bvn.html"> <li>Asides</li></a>
+<a href="../references/references.html"> <li>References</li></a>
+<a href="../faqs/faqs.html"> <li>FAQs</li></a>
+</ul>
+</center>
+</div>
+
+</div>
+
+</body>
+</html>

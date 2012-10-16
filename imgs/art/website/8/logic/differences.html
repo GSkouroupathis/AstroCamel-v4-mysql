@@ -1,0 +1,205 @@
+<html>
+<head>
+
+<meta http-equiv="content-type" content="text/html;charset=utf-8">
+
+<meta name="description" content="Quantum Computing 1st Year Project: Quantum Logic">
+
+<meta name="author" content="George Skouroupathis">
+
+<title>Quantum Logic</title>
+
+<link rel="stylesheet" type="text/css" href="../style.css" />
+
+<link rel="icon" type="image/x-icon" href="../imgs/favicon.ico" />
+<link rel="shortcut icon" type="image/x-icon" href="../imgs/favicon.ico" />
+
+</head>
+
+<body>
+
+<div id="header">
+<h1 id="header-h1">Quantum Logic</h1>
+<span id="header-more">An insight to the quantum world</span>
+</div>
+
+<div id="container">
+
+<div id="menutop" class="menu">
+<center>
+<ul>
+<a href="../index.html" class="home">&nbsp;</a><a href="../index.html"> <li>Home</li></a>
+<a href="../mechanics/mechanics.html"> <li>Mechanics</li></a>
+<a href="../computing/computing.html"> <li>Computing</li></a>
+<a href="../logic/logicthroughtime.html" class="current"> <li>Logic</li></a>
+<a href="../asides/bvn.html"> <li>Asides</li></a>
+<a href="../references/references.html"> <li>References</li></a>
+<a href="../faqs/faqs.html"> <li>FAQs</li></a>
+</ul>
+</center>
+</div>
+
+<div id="jumpto">
+<a href="logicthroughtime.html">Logic Through Time</a><a href="originmotivation.html">Q.Logic Origin and Motivation</a><a href="definition.html">Q.Logic Definition</a><a href="differences.html" class="selected-sub">Quantum Vs Classical</a><a href="use.html">Use of Q.Logic</a></div>
+
+
+<div id="main">
+<!-- Research goes here -->
+<h3>Quantum Vs Classical Logic</h3>
+
+<p>Quantum logic has essentially many differences than classical logic. Besides, if this was not the case then we might not need a brand-new kind of logic to describe quantum theory. </p>
+
+<p>Before explaining some significant differences among these two kinds of logic, we should consider their origin. The main causes of differences are:</p>
+
+<ul>
+<li>The probabilistic nature of quantum mechanics and the uncertainty involved in extracting results.
+<li>The fact that when a measurement is made on a quantum system, the state of the system is altered.
+
+</ul>
+<p>Let’s consider the following example. Suppose we want to make a measurement regarding a physical quantity A on a system which is currently in state X. We then propose that A = μ where μ is the result of the measurement. In classical physics, this proposition is true for the system in the state X. In quantum mechanics however, the proposition is true for the system in state Y, the state of the system after the measurement took place. Unlike classical logic, it is not necessary for a proposition to have any truth value in a quantum system in its current state. It may be the case that the proposition acquires its value in another state, for example in a state after some measurement. 
+We therefore see that it is not possible to reason about quantum mechanics with classical logic but instead we have to use the logic that takes quantum ideas into consideration.</p>
+
+<p>Five significant differences between classical and quantum logic are described below:</p>
+
+<h4>Quantum disjunction</h4>
+
+<p>The classical disjunction (OR) of two propositions A and B states that either A is true, or B is true, or both are true. On the contrary, in quantum logic it is possible for the disjunction A V B to be satisfied in some state while neither A or B hold by themselves. This is particularly interesting when A and B describe different values for the same physical quantity.</p>
+
+<p>Suppose a particle’s spins is measured in two directions, x-axis (up or down ) y-axis(left or right). By the principle of uncertainty the value of y-axis spin will be indeterminate from the state after verifying the spin in x-axis. In quantum logic if a proposition is indeterminate then its truth value is false. </p>
+<p>So if we have the following propositions:</p>
+A: spin y is left <br />
+B:spin y is right <br />
+After verifying spin x, both propositions A and B are indeterminate <br />
+A V B = False V False <br />
+However we know that the proposition A V B (either spin y is left or right) must be true <br />
+A V B = True <br /> <br />
+
+<h4>Failure of distributive law</h4>
+
+<p>The distributive law in algebra states that: </p>
+a x (b + c) = a x b + a x c <br /> <br />
+The law is valid also in classical propositional logic: <br /> <br />
+A V (B Ʌ C) = (A V B) Ʌ (A V C) <br />
+A Ʌ (B V C) = (A Ʌ B) V (A Ʌ C) <br />
+
+<p>However this is not the case in quantum logic. This is because a quantum disjunction can be true even if both of the elements of the disjunction are not true. These correspond to the common case in quantum mechanics, where a pair of properties is semantically defined but each of its members is necessarily undefined. </p>
+
+<p>For example, suppose we have a particle that moves in a certain direction across an axis (e.g. x -axis). By the principle of uncertainty the value of position will be indeterminate from the state after verifying the direction of the move, so the following propositions P Ʌ Q and P Ʌ R are not necessarily true. </p>
+P: The direction of move of the particle is positive <br />
+Q: The position of the particle is &#60; k <br />
+R: The position of the particle is &#62;=k <br />
+P Ʌ (Q V R) = P Ʌ True = P <br />
+(P Ʌ Q) Ʌ (P Ʌ R) = False V False = False <br /> <br />
+The two expressions above are not equal. <br />
+Hence the distributivity law fails <br /> <br />
+
+<h4>Failure of commutativity </h4>
+
+<p>In logic, as in mathematics, a binary operation is commutative if and only if the result does not depend on the order of the operands. This property holds when applied over conjunctions or disjunctions in classical logic. For example, if we change the order of A and B in (A Ʌ B) or in (A V B), the result of the function does not change.</p>
+
+<p>However, in quantum logic, the commutative law does not stand. This is simple to explain. Let's take into consideration the basic rules of quantum computing that have been established since now. In quantum mechanics a system has a state at a specific time. Any measurement one makes to the system will change its state. A further measurement will be done to the altered state, making the result of this measurement invalid for the initial system. To understand the implications of this principle, consider two physical properties X and Y (e.g. position and energy of a particle) and two quantum operators Xop and Yop that are applied on these properties respectively (e.g. is position within an area, energy is over certain value). Then try to assign them on a function F (could be the logical and/or) first in order F Xop Yop and then F Yop Xop. In the first case first we verify Xop, and this changes the systems state to a new state (S1), then when verifying Yop we are verifying it in state S1 and not the initial state and some result, in the second case we verify Yop and this changes the system into a new state (S2), then when verifying the Xop we are verifying it in state S2 and this may give a different result.</p>
+1st case: F Xop Yop: Xop verified when system in initial state, Yop verified when system in S1 state <br />
+2nd case: F Yop Xop: Yop verified when system in initial state, Xop verified when system in S2 state <br /> 
+<br><p><b>
+Failure of excluded middle (proof by contradiction)</b> </p>
+
+Propositions in classical logic can be true or false. These are the only possibilities, i.e. there is no middle value.  For example consider the following proposition: <br />
+<br>
+Socrates is mortal. <br />
+<br>
+By the law of excluded middle we can say that either this proposition is true or its negation is true.  <br />
+<br>
+i.e. the disjunction <br />
+<br>
+Socrates is mortal or Socrates is not mortal <br />
+<br>
+is always true. The middle position, that Socrates is neither mortal nor immortal, is excluded by logic. As a result, if one wants to prove the truthfulness of a proposition, all he has to do is to prove the falseness of its exact opposite proposition. This was first proposed by Aristotle. <br />
+
+<p>Since quantum logic is not two-valued logic, the law of excluded middle does not hold. For example, consider the unit of quantum information, the qubit. Unlike the normal bit which is Boolean (value 1 or 0 only) the qubit can be in states |0>, |1> or in a superposition of those two. Since a qubit can take many values, this means that if you prove that a qubit does not take the value 1 you cannot know for sure that it takes the value 0, as it can take any other superposition of 1 and 0. </p>
+
+<h4>Non-monotonicity</h4>
+
+<p>Classical logic is monotonic. This means that in the case where we have more information (true statements or assumptions), we can still make the deductions that could be made with less information. For example, suppose we know that propositions A and A -> B (A implies B) are both true in a situation. From these we can deduce that B is also true. Now if we know that C is true in addition to A and A -> B in that same situation, we can still deduce that B is true as well. </p>
+
+<p>Quantum logic on the other hand is non-monotonic because it is affected by Heisenberg’s Uncertainty Principle. Let’s again consider an example. Suppose we measure the energy (E) of an electron in an atom and we find that it is equal to μ. This ‘proves’ the proposition E = μ. We now measure the position (P) of the electron and find out that it is equal to k. This in turn proves the proposition P = k. In classical logic we could now say that we know both E and P, and that any subsequent measure of E will still result in μ. In quantum logic however this is not the case. A further measurement on E will return a value different from μ. This is due to the fact that by measuring P we got more information (regarding the electron’s position) but we have invalidated the original result about energy. This conclusion is based on the fact that there exists an uncertainty relation between energy and position, which suggests that the more we know about one of the two quantities, the less we know for sure about the second. This, as far as logic is concerned, is non-monotonicity. The extra information about position changed the validity of what we knew about energy.</p>
+
+
+<h4>Problems due to these differences in classical propositional logic proof system</h4>
+<u>Direct arguments</u><br />
+This is a proof of ((p → q) → p) → p (known as 'Peirce’s law'). <br />
+<p>Take an arbitrary situation. If p is true in this situation, then
+((p → q) → p) → p is true, since any formula A → B is true when B
+is true. We are done.
+If not, then p must be false in this situation.
+So p → q is true, because A → B is true when A is false.
+So (p → q) → p is false, because the LHS is true and the RHS false:
+A → B is false when A is true and B false.
+So ((p → q) → p) → p is true, because A → B is true when A is
+false. We are done again, and finished. </p>
+
+<p>This was an argument by cases: p true, or p false. They are exhaustive: this is known as the ‘law of excluded middle’.
+However as we know this law doesn’t hold in quantum logic, law of included middle holds instead. So this proof isn't exhaustive for quantum logic. The case of p = any superposition between 1 and 0 (True and False) should be checked.</p>
+<u>Use of Equivalences </u><br />
+In classical propositional logic we can proof that (p → r) ∧ (q → r) is equivalent to p ∨ q → r: <br />
+1. (p → r) ∧ (q → r) is equivalent to: <br />
+2. (¬p ∨ r) ∧ (¬q ∨ r) (using p → q equivalent to ¬p ∨ q), <br />
+3. (¬p ∧ ¬q) ∨ r (using distributivity of ∧ over ∨), <br />
+4. ¬(p ∨ q) ∨ r (using De Morgan law), <br />
+5. p ∨ q → r (using p → q equivalent to ¬p ∨ q again). <br />
+
+<p>In quantum logic step 3 is not valid since it uses distributivity that it does not hold. </p>
+<u>Natural Deduction </u><br>
+1. A → B&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;given <br />
+2. C → A&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;given <br />
+<div style="border: 1px solid black; width: 200px">
+3. C&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ass<br />
+4. A&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;→E(2,5)<br />
+5. B&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;→E(1,6)
+</div>
+
+6. C → B&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;→I (3,5) <br />
+<p>Now this one holds only in classical logic, because in quantum logic, a non-monotonic logic since we assume something (C) we add something new and it is like considering a totally different system at a different state. So 1 and 2 are not valid after the assumption, we cannot use them in the box. </p>
+<p>Now consider the following example:</p>
+<p>If we see wet grass the most likely explanation is that it rained. However, this explanation has to be retracted when learning that the real cause of the grass being wet was a sprinkler. Since the old explanation (it rained) is retracted because of the addition of a piece of knowledge (a sprinkler was active), any logic that models explanations is non-monotonic.</p>
+W: Grass is wet <br />
+R: It rained <br />
+S: sprinkler was active <br /> <br />
+
+1. W&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;given <br />
+2. W → R&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;given <br />
+3. R&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;→E(1,2) <br />
+
+<p>However if we add another given into our system </p>
+
+1. W&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;given <br />
+2. W → R&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;given <br />
+3. S&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;given <br />
+4. R&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;→E(1,2) <br />
+
+<p>In classical monotonic logic we can still deduce that it rained. In quantum logic, a non-monotonic logic, this is not possible. The extra information that we have about the sprinkler invalidates our previous inference.</p>
+
+</div>
+
+<div id="nextprev">
+<span id="previous"><a href="definition.html">&#171; Previous</a></span>
+<span id="next"><a href="use.html">Next &#187;</a></span>
+</div>
+
+<div id="menu-bottom" class="menu">
+<center>
+<ul>
+<a href="../index.html" class="home">&nbsp;</a><a href="../index.html"> <li>Home</li></a>
+<a href="../mechanics/mechanics.html"> <li>Mechanics</li></a>
+<a href="../computing/computing.html"> <li>Computing</li></a>
+<a href="../logic/logicthroughtime.html" class="current"> <li>Logic</li></a>
+<a href="../asides/bvn.html"> <li>Asides</li></a>
+<a href="../references/references.html"> <li>References</li></a>
+<a href="../faqs/faqs.html"> <li>FAQs</li></a>
+</ul>
+</center>
+</div>
+
+</div>
+
+</body>
+</html>

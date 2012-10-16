@@ -1,0 +1,98 @@
+html, body {
+	background-color: #484848;
+	font-family: Arial, Courier, Verdana;
+	padding: 0;
+	margin: 0;
+}
+
+#topmenu {
+	text-align: center;
+	border-bottom: 1px solid #585858;
+	width: 100%;
+	margin: 0;
+	padding-top: 10px;
+	height: 40px;
+	background: #d3e9d2 url('images/menu.png');
+	color: #225522;
+	font-size: 165%;
+}
+
+#topmenu a {
+	color: #DDD;
+	text-decoration: none;
+}
+
+#topmenu a:hover {
+	color: #DED;
+	border-bottom: 2px dotted #be8479;
+}
+
+#screen {
+	text-align: justify;
+	padding: 10px 10px 10px 10px;
+	width: 780px;
+	height: 530px;
+	overflow-y: auto;
+	background: #000 url('images/back.png');
+	color: #FFF;
+	border: 1px dotted #be8479;
+	margin-left: auto;
+	margin-right: auto;
+	font-size: 14px;
+}
+
+#screen a {
+	color: #669966;
+	text-decoration: none;
+	border-bottom: 1px dotted #500;
+}
+
+#screen a:hover {
+	color: #090;
+	border-bottom: 1px dotted #C00;
+}
+
+#moreback {
+	background: #000 url('images/moreback.png');
+	width: 950px;
+	height: 600px;
+	margin-top: 10px;
+	padding: 0;
+	margin-left: auto;
+	margin-right: auto;
+	padding-top: 50px;
+}
+
+#moreback h1 {
+	margin: 0;
+	padding: 0;
+	color: #FFF;
+	position: relative;
+	left: 75px;
+}
+
+#footer {
+	text-align: center;
+	width: 100%;
+	margin-top: 0px;
+	padding-top: 10px;
+	height: 30px;
+	
+/*
+	border-bottom: 1px solid #585858;
+	border-top: 1px solid #585858;
+	background: #d3e9d2 url('images/footer.png');
+*/
+	color: #bce0bb;
+	font-size: 1em;
+}
+
+#footer a {
+	color: #fff;
+	text-decoration: none;
+	border-bottom: 1px dotted #99cc98;
+}
+
+#footer a:hover {
+	border-bottom: 1px dotted #C00;
+}

@@ -1,0 +1,263 @@
+<html>
+<head>
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
+<script type="text/javascript">
+$(document).ready(function(){
+$(".mainTitle").mouseenter(function(){
+    $(this).css("cursor", "crosshair");
+  });
+$(".mainTitle").click(function(){
+    $(this).next("#main").slideToggle(400);
+  });
+
+$(".mainEnd").mouseenter(function(){
+    $(this).css("cursor", "crosshair");
+  });
+$(".mainEnd").click(function(){
+    $(this).parent().slideToggle(400);
+  });
+
+/*Submenus slidedown*/
+$(".menuList li").mouseenter(function(){
+    $(this).children("a").next("ul").slideDown(200);
+  });
+$(".menuList li").mouseleave(function(){
+    $(this).children("a").next("ul").slideUp(200);
+  });
+
+/*Menus with submenus background*/
+$(".menuList").children("li").mouseenter(function(){
+    $(this).children("a:first").css({color: '#FFF', background: '#C00', border: '1px solid #C00'});
+  });
+$(".menuList").children("li").mouseleave(function(){
+    $(this).children("a:first").css({color: '#C00', background: '#FFF', border: '1px dotted #EBB'});
+  });
+});
+</script>
+<style type="text/css">
+body {
+ margin: 0;
+ padding: 0;
+ background: #FFF;
+ font-family:"Arial",Georgia,Serif;
+}
+
+#container {
+ width: 1000px;
+ margin: 0 auto 3px auto;
+
+}
+
+#header {
+ margin: 0 0 20px 0;
+ padding-left: 25px;
+ background: #C00;
+ font-size:350%;
+ color: #FFF;
+}
+
+#menu {
+ width: 200px;
+ margin: 0;
+ padding: 0;
+ float: left;
+}
+
+#menu .menuList {
+ width: 200px;
+ margin: 0;
+ padding: 0;
+ list-style-type: none;
+}
+
+#menu .menuList li {
+ width: 198px;
+ margin: 0;
+ padding: 0;
+ color: #F00;
+}
+
+#menu .menuList li a {
+ display: block;
+ width: 148px;
+ margin: 2px 0 0 0;
+ padding: 10px 25px 10px 25px;
+ border: 1px dotted #EBB;
+ background: #FFF;
+ font-size: 200%;
+ text-decoration: none;
+ color: #C00;
+}
+
+#menu .menuList li a:hover {
+ border: 1px solid #C00;
+ color: #FFF;
+}
+
+#menu .menuList li .sub {
+ display: none;
+ margin: 0;
+ padding: 0;
+ background: #FFF;
+ list-style-type: none;
+ font-size: 50%;
+}
+
+#menu .menuList li .sub li {
+ width: 200px;
+ margin: 0;
+ padding: 0;
+ color: #F00;
+}
+
+#menu .menuList li .sub li a {
+ display: block;
+ width: 148px;
+ margin: 0;
+ padding: 10px 25px 10px 25px;
+ border-top: 1px solid #FEE;
+ border-right: 1px solid #EBB;
+ border-bottom: 1px solid #EBB;
+ border-left: 1px solid #EBB;
+ background: #FEE;
+ font-size: 200%;
+ text-decoration: none;
+ color: #C00;
+}
+
+#menu .menuList li .sub li a:hover {
+ border-top: 1px solid #E66;
+ border-right: 1px solid #E66;
+ border-bottom: 1px solid #E66;
+ border-left: 1px solid #E66;
+ background: #F99;
+ color: #FFF;
+}
+
+.mainTitle {
+ width: 750px;
+ padding: 0;
+ border-top: 1px solid #FFF;
+ float: right;
+ background: #A00;
+}
+
+.mainTitle h1 {
+ margin: 0 0 0 25px;
+ color: #FEE;
+}
+
+#main {
+ display: none;
+ width: 700px;
+ margin-bottom: 20px;
+ padding: 10px 25px 0 25px;
+ float: right;
+ background: #FEE;
+ font-size: 120%;
+}
+
+.mainEnd {
+ width: 750px;
+ margin-left: -25px; /*to fix the #main padding*/
+ margin-top: 10px;
+ padding: 0;
+ background: #A00;
+ font-size: 83.333%;
+}
+
+.mainEnd h1 {
+ margin: 0 0 0 25px;
+ color: #FEE;
+}
+
+#fix {
+ clear: both;
+}
+
+#footer{
+ margin: 20px 0 0 0;
+ padding-left: 25px;
+ background: #C00;
+ font-size:350%;
+ color: #FFF;
+}
+</style>
+<title>Homepage</title>
+</head>
+<body>
+
+<div id="container">
+
+	<div id="header">
+	<span id="headerText">This is the header text</span>
+	</div>
+	
+	<div id="menu">
+	<ul class="menuList">
+		<li><a href="#">Home</a>
+			<ul class="sub">
+			<li><a href="#">what</a></li>
+
+			<li><a href="#">is</a></li>
+
+			<li><a href="#">up</a></li>
+			</ul>
+		</li>
+		<li><a href="#">Code</a></li>
+		<li><a href="#">Portofolio</a></li>
+		<li><a href="#">Services</a>
+			<ul class="sub">
+			<li><a href="#">this</a></li>
+
+			<li><a href="#">is</a></li>
+
+			<li><a href="#">nice</a></li>
+			</ul>
+		</li>
+		<li><a href="#">Contact</a></li>
+	</ul>
+	</div>
+	
+	<div class="mainTitle">
+	<h1>Section #1</h1>
+	</div>
+
+	<div id="main">
+	Main stuffMain stuffMain stuffMain stuffMain stuffMain stuffMain stuffMain stuffMaiin stuffMain stuffMain stuffMain stuffMain stuffMain stuffMaiin stuffMain stuffMain stuffMain stuffMain stuffMain stuffMain stuffMain stuffMain stuffMain stuff
+	<br />
+	Main stuffMain stuffMain stuffMain stuffMain stuffMain stuffMain stuffMain stuffMain stuffMain stuffMain stuffMain stuff
+	<br />
+	Main stuffMain stuffMain stuffMain stuffMain stuffMain stuffMain stuffMain stuffMain stuffMain stuffMain stuffMain stuff
+	  <div class="mainEnd">
+	  <h1>Section #1</h1>
+	  </div>
+
+	</div>
+
+	<div class="mainTitle">
+	<h1>Section #2</h1>
+	</div>
+
+	<div id="main">
+	Main stuffMain stuffMain stuffMain stuffMain stuffMain stuffMain stuffMain stuffMaiin stuffMain stuffMain stuffMain stuffMain stuffMain stuffMaiin stuffMain stuffMain stuffMain stuffMain stuffMain stuffMain stuffMain stuffMain stuffMain stuff
+	<br />
+	Main stuffMain stuffMain stuffMain stuffMain stuffMain stuffMain stuffMain stuffMain stuffMain stuffMain stuffMain stuff
+	<br />
+	Main stuffMain stuffMain stuffMain stuffMain stuffMain stuffMain stuffMain stuffMain stuffMain stuffMain stuffMain stuff
+	  <div class="mainEnd">
+	  <h1>Section #2</h1>
+	  </div>
+
+	</div>
+	<div id="fix">
+	</div>
+
+	<div id="footer">
+	<span id="footerText">This is the footertext</span>
+	</div>
+	
+</div>
+
+</body>
+</html>

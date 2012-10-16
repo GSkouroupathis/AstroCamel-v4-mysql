@@ -1,0 +1,37 @@
+.torcontainer {
+ height: 100px;
+ background: #CCFF99 url('torrent.gif') repeat-x;
+ margin: 0 0 5px 0;
+ border: 1px dotted #FC3;
+ overflow: auto;
+ color: #000;
+}
+
+.torcontainer:hover {
+ border: 1px solid #F96;
+}
+
+.torcontainer img {
+ margin: 10px 0 0 10px;
+ float: left;
+ border: none;
+}
+
+.torcontainer img:hover {
+ margin: 8px 0 0 8px;
+ border: 2px solid #F96;
+}
+
+.tordescr {
+ height: 80px;
+ width: 524px;
+ float: right;
+ margin: 10px 10px 0 0;
+ padding: 0;
+ overflow: auto;
+ text-decoration: none;
+}
+
+.tordescr a {
+ text-decoration: none;
+}

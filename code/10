@@ -1,0 +1,194 @@
+#TRIANGULAR ENCRYPTION.PY BY GEORGE SKOUROUPATHIS
+
+#Character table size
+def set_charsize():
+    charsize = input("Enter your character table size: ")
+    if charsize < 95:
+        charsize = 95
+        
+    #Create a list with the number of triangles in each row
+    rows = []
+    a = 1
+    sum = 0
+    while sum <= charsize:
+        rows.append(a)
+        a += 2
+        sum += a
+    rows.append(a)
+    
+    #Create a list with the sum of triangles until that row (same variable rows)
+    for i in range(1, len(rows)):
+        rows[i] += rows[i-1]
+    
+    #Construct a/b sequence
+    absequence = []
+    timesdone = 0
+    done = 0
+    while True:
+        if done == 1: break
+        absequence.append(1)
+        if len(absequence) >= rows[-1]: break
+        absequence.append(1)
+        if len(absequence) >= rows[-1]: break
+        absequence.append(0)
+        if len(absequence) >= rows[-1]: break
+        j = 1
+        while j <= timesdone:
+            absequence.append(1)
+            if len(absequence) >= rows[-1]:
+                done = 1
+                break
+            absequence.append(0)
+            if len(absequence) >= rows[-1]:
+                done = 1
+                break
+            j += 1
+        timesdone += 1
+
+    #Create a list with the a-values
+    avalues = []
+    for k in range(len(rows)):
+        p = k+1
+        while p > 0:
+            a,b = p, k + 2 - p
+            avalues.append([a,b])
+            p -= 1
+
+    #Create a list with the b-values
+    bvalues = []
+    for k in range(1, len(rows)):
+        p = 1
+        while p <= k:
+            a,b = p, len(rows) + p - k
+            bvalues.append([a,b])
+            p += 1
+
+    #Create the actual a/b sequence (abtable)
+    global abtable
+    abtable = []
+    aindex = 0
+    bindex = 0
+    for i in range(len(absequence)):
+        if absequence[i] == 1:
+            abtable.append("a"+ str(avalues[aindex][0]) + "." + str(avalues[aindex][1]))
+            aindex += 1
+        elif absequence[i] == 0:
+            abtable.append("b"+ str(bvalues[bindex][0]) + "." + str(bvalues[bindex][1]))
+            bindex += 1
+
+#Assign the ascii table
+ascii = [' ', '!', '"', '#', '$', '%', '&', "'", '(', ')', '*', '+', ',', '-', '.', '/', '0', '1',
+        '2', '3', '4', '5', '6', '7', '8', '9', ':', ';', '<', '=', '>', '?', '@', 'A', 'B', 'C', 'D', 'E',
+        'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y',
+        'Z', '[', '\\', ']', '^', '_', '`', 'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm',
+        'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z', '{', '|', '}', '~']
+        
+#Assign the first key
+def set_firstkey():
+    key = input("Give the first key: ")
+    #Eliminate possibility of zero division
+    if key == 0:
+        key = 5
+    key = len(ascii) % key
+
+    #Assign the encrypted ascii
+    global enc_ascii
+    enc_ascii = [' ', '!', '"', '#', '$', '%', '&', "'", '(', ')', '*', '+', ',', '-', '.', '/', '0', '1',
+        '2', '3', '4', '5', '6', '7', '8', '9', ':', ';', '<', '=', '>', '?', '@', 'A', 'B', 'C', 'D', 'E',
+        'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y',
+        'Z', '[', '\\', ']', '^', '_', '`', 'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm',
+        'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z', '{', '|', '}', '~']
+    i = 0
+    rounds = 0 #check to see if we've reached enc_ascii's end
+    while i < len(ascii):
+        if (key + i > len(ascii) - 1) and (rounds == 0):
+            key = -i
+            rounds = 1
+        enc_ascii[key+i] = ascii[i]
+        i += 1
+
+#Assign the second key
+def set_secondkey():
+    key2 = input("Give the second key: ")
+    #Eliminate possibility of zero division
+    if key2 == 0:
+        key2 = 5
+    key2 = len(abtable) % key2
+
+    #Insert blank values created with key2 into abtable
+    constant = len(abtable) - len(ascii)
+    rounds = 0
+    for i in range(constant):
+        if key2 + i > len(abtable) - 1 and (rounds == 0):
+            key2 = -i
+            rounds = 1
+        abtable[key2 + i] = " "
+
+    #Create encoding table
+
+    #Remove blank values from abtable
+    i = 1
+    while i <= constant:
+        abtable.remove(" ")
+        i += 1
+
+    #Insert values into encoding_table
+    global encoding_table
+    encoding_table = []
+    for i in range(len(enc_ascii)):
+        value1 = enc_ascii[i]
+        value2 = abtable[i]
+        encoding_table.append([value1,value2])
+
+#Encoder
+def encoder():
+    message = raw_input("Enter your message: ")
+    enc_message = ""
+    for i in message:
+        for row in encoding_table:
+            if row[0] == i:
+                enc_message += row[1]
+    print enc_message
+
+#Decoder
+def decoder():
+    encoded_message = raw_input("Enter your encoded message: ")
+
+    #Break up the encoded message into encoded charactes
+    import re
+
+    #Define the regular expressions pattern
+    pattern = r'[ab]\d+\.\d+'
+ 
+    dec_msg_list = re.findall(pattern, encoded_message)
+
+    dec_message = ""
+    for i in dec_msg_list:
+        for row in encoding_table:
+            if row[1] == i:
+                dec_message += row[0]
+    print dec_message
+
+#Set keys for first time
+set_charsize()
+set_firstkey()
+set_secondkey()
+
+#Menu
+while True:
+    print "1) Encoder"
+    print "2) Decoder"
+    print "3) Reset keys"
+    choice = raw_input("What's your choice? (type 'exit' to quit the program): ")
+    if choice == "exit":
+        break
+    elif choice != "1" and choice != "2" and choice != "3":
+        print "Please enter one of the three values"
+    elif choice == "1":
+        encoder()
+    elif choice == "2":
+        decoder()
+    elif choice == "3":
+        set_charsize()
+        set_firstkey()
+        set_secondkey()
