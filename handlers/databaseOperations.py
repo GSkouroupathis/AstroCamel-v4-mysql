@@ -6,7 +6,7 @@ def connectToDatabase(database):
 	global dbConnection
 	global dbCursor
 
-	dbConnection = MySQLdb.connect('localhost', 'username', 'password', database)
+	dbConnection = MySQLdb.connect('localhost', 'root', 'w3lcome', database)
 	dbCursor = dbConnection.cursor()
 	
 	if not dbConnection:
