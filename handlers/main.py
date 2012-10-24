@@ -1,3 +1,6 @@
+###################################
+# CODE AUTHOR: GEORGE SKOUROUPATHIS
+###################################
 import tornado.ioloop
 import tornado.web
 import os
@@ -744,8 +747,6 @@ application = tornado.web.Application([
 	(r"/showart/([0-9]+)", ShowArtHandler),
 	(r"/showcode/([0-9]+)", ShowCodeHandler),
 ], **settings)
-
-
 
 if __name__ == "__main__":
 	application.listen(7776)

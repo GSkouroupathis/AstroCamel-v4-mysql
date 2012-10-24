@@ -1,3 +1,6 @@
+###################################
+# CODE AUTHOR: GEORGE SKOUROUPATHIS
+###################################
 import databaseOperations
 import re
 import hashlib
