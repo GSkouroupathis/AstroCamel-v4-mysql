@@ -82,13 +82,13 @@ def initTables():
 			
 	dbCursor.execute('''INSERT INTO users_table
 		VALUES (1, 'george_skouroupathis@hotmail.com', 'admin',
-		'461ea74cf748fe167485fda5c87c14564cb5752235fe6325b72190ea82da29818bdc344dcc46cb59a811abe53033322995b71ca22bd5670d9893f15f62d39088',
+		'c7ad44cbad762a5da0a452f9e854fdc1e0e7a52a38015f23f3eab1d80b931dd472634dfac71cd34ebc35d16ab7fb8a90c81f975113d6c7538dc69dd8de9077ec',
 		'1337.1337', 1, 1, 0, 'V0e_aaaaaaa5FmU')
 		''')
 
 	dbCursor.execute('''INSERT INTO users_table
 		VALUES (2, 'admin@astrocamel.com', 'administrator',
-		'461ea74cf748fe167485fda5c87c14564cb5752235fe6325b72190ea82da29818bdc344dcc46cb59a811abe53033322995b71ca22bd5670d9893f15f62d39088',
+		'cf835de3d4ea01367c45e412e7a9393a85a4e40af149ed8c3ed6c37c05b67b27813d7ff8072c1035cedd19415adf17128d63186f05f0d656002b0ca1c34f44a0',
 		'1337.1337', 1, 1, 0, '*e8QaaaaaaanYNf')
 		''')
 
