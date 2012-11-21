@@ -639,7 +639,7 @@ class ShowNewsHandler(BaseHandler):
 			newsFile.close()
 		else:
 			newsContent = None
-			
+		
 		self.render("../shownews.html", 
 			userName=self.get_secure_cookie("user"),
 			news=news,
