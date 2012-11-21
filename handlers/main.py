@@ -749,12 +749,12 @@ application = tornado.web.Application([
 ], **settings)
 
 if __name__ == "__main__":
-	application.listen(7776)
+	application.listen(8000)
 	print "Starting server"
 	#######For the first time#######
-	databaseOperations.connectToDatabase('astrodb')
-	databaseOperations.initTables()
-	databaseOperations.closeConnectionToDatabase()
-	print "Database Tables Created"
+	#databaseOperations.connectToDatabase('astrodb')
+	#databaseOperations.initTables()
+	#databaseOperations.closeConnectionToDatabase()
+	#print "Database Tables Created"
 	################################
 	tornado.ioloop.IOLoop.instance().start()
