@@ -165,16 +165,19 @@ class RegisterHandler(BaseHandler):
 			verificationCode = hashlib.sha512(username + hashedPwd + r).hexdigest()[:35]
 			#Construct the URL and EMAIL CONTENTS
 			url = "http://www.astrocamel.com/verify?u=%s&c=%s&r=%s" %(username, verificationCode, r)
-			msg =  MIMEText("You have successfully registers at AstroCamel.com. Visit " + url + " to verify your registration.")
-			msg['Subject'] = 'Registration at AstroCamel'
-			msg['From'] = 'donotreply@astrocamel.com'
-			msg['To'] = email
 		
-		
-			#Send the email
-			s = smtplib.SMTP('localhost')
-			s.sendmail('donotreply@astrocamel.com', [email], msg.as_string())
-			s.quit()
+			to = email
+			gmail_user = 'x@x.com'
+			gmail_pwd = 'x'
+			smtpserver = smtplib.SMTP("smtp.gmail.com",587)
+			smtpserver.ehlo()
+			smtpserver.starttls()
+			smtpserver.ehlo
+			smtpserver.login(gmail_user, gmail_pwd)
+			header = 'To:' + to + '\n' + 'From: ' + gmail_user + '\n' + 'Subject:Registration at AstroCamel \n'
+			msg = header + "\n You have successfully registers at AstroCamel.com. Visit " + url + " to verify your registration. \n\n"
+			smtpserver.sendmail(gmail_user, to, msg)
+			smtpserver.close()			
 			self.render("../message.html", userName=self.get_secure_cookie("user"), message="Register complete. Check your email for the verification code")
 		except:
 			self.render("../message.html", userName=self.get_secure_cookie("user"), message="Registration could not be complete due to an error")
@@ -246,18 +249,20 @@ class LostPasswordHandler(BaseHandler):
 		
 			#Construct the URL
 			url = "http://www.astrocamel.com/resetpassword?u=%s&c=%s" %(username, resetCode)
-		
-			#Construct the EMAIL CONTENTS
-			msg =  MIMEText("You have requested a password reset. Please follow the link: " + url + " to reset your password.")
-			msg['Subject'] = 'Password Lost - AstroCamel'
-			msg['From'] = 'donotreply@astrocamel.com'
-			msg['To'] = email
-		
-			#Send the email
-			s = smtplib.SMTP('localhost')
-			s.sendmail('donotreply@astrocamel.com', [email], msg.as_string())
-			s.quit()
-			self.render("../message.html", userName=self.get_secure_cookie("user"), message="An email has been sent to your address with further instructions on how to reset your password")
+
+			to = email
+			gmail_user = 'x@x.com'
+			gmail_pwd = 'x'
+			smtpserver = smtplib.SMTP("smtp.gmail.com",587)
+			smtpserver.ehlo()
+			smtpserver.starttls()
+			smtpserver.ehlo
+			smtpserver.login(gmail_user, gmail_pwd)
+			header = 'To:' + to + '\n' + 'From: ' + gmail_user + '\n' + 'Subject:Lost Password - AstroCamel \n'
+			msg = header + "\n You have requested a password reset. Please follow the link: " + url + " to reset your password. \n\n"
+			smtpserver.sendmail(gmail_user, to, msg)
+			smtpserver.close()
+			self.render("../message.html", userName=self.get_secure_cookie("user"), message="An email has been sent to your address with further instructions on how to reset your password. You may need to check your junk mail")
 		except:
 			self.render("../message.html", userName=self.get_secure_cookie("user"), message="Cannot reset password for this user")
 
