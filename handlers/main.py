@@ -158,6 +158,8 @@ class RegisterHandler(BaseHandler):
 			ip_address = self.request.remote_ip
 			databaseOperations.connectToDatabase('astrodb')
 			databaseOperations.register(email, username, hashedPwd, ip_address)
+			#Create reset code
+			chars = string.ascii_lowercase + string.ascii_uppercase + string.digits
 			resetCode =  ''.join( random.choice(chars) for r in range(15) )
 			databaseOperations.changeResetCode(username, resetCode)
 			databaseOperations.closeConnectionToDatabase()
