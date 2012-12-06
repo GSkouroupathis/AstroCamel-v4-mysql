@@ -26,7 +26,7 @@ def checkRegister(email, username, password):
 		return databaseOperations.checkRegister(email, username)
 		
 def checkEmail(email):
-	pattern = r'^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9._%+-]+(\.\w)+$'
+	pattern = r'^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9_%+-]+[.a-zA-Z0-9]+$'
 	return re.match(pattern, email)
 	
 def checkChangePassword(username, cpassword, npassword, rnpassword):
