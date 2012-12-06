@@ -158,6 +158,8 @@ class RegisterHandler(BaseHandler):
 			ip_address = self.request.remote_ip
 			databaseOperations.connectToDatabase('astrodb')
 			databaseOperations.register(email, username, hashedPwd, ip_address)
+			resetCode =  ''.join( random.choice(chars) for r in range(15) )
+			databaseOperations.changeResetCode(username, resetCode)
 			databaseOperations.closeConnectionToDatabase()
 			
 			#Construct the verification code
@@ -178,7 +180,7 @@ class RegisterHandler(BaseHandler):
 			msg = header + "\n You have successfully registers at AstroCamel.com. Visit " + url + " to verify your registration. \n\n"
 			smtpserver.sendmail(gmail_user, to, msg)
 			smtpserver.close()			
-			self.render("../message.html", userName=self.get_secure_cookie("user"), message="Register complete. Check your email for the verification code")
+			self.render("../message.html", userName=self.get_secure_cookie("user"), message="Registration complete. Check your email for the verification code. You may need to check your junk mail")
 		except:
 			self.render("../message.html", userName=self.get_secure_cookie("user"), message="Registration could not be complete due to an error")
 			
