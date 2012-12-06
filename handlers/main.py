@@ -571,6 +571,7 @@ class PostCommentHandler(BaseHandler):
 		date = time.strftime("%d %b %G %H:%M", time.localtime(time.time()))
 		user_id = databaseOperations.getIDFromUser(user)[0]
 		content_type = databaseOperations.getContentTypeFromID(content_id)[0]
+		print content_type
 		
 		if not comment:
 			self.redirect( "/show%s/%s" %(content_type, str(content_id)) )
@@ -761,9 +762,9 @@ if __name__ == "__main__":
 	application.listen(8000)
 	print "Starting server"
 	#######For the first time#######
-	#databaseOperations.connectToDatabase('astrodb')
-	#databaseOperations.initTables()
-	#databaseOperations.closeConnectionToDatabase()
-	#print "Database Tables Created"
+	databaseOperations.connectToDatabase('astrodb')
+	databaseOperations.initTables()
+	databaseOperations.closeConnectionToDatabase()
+	print "Database Tables Created"
 	################################
 	tornado.ioloop.IOLoop.instance().start()

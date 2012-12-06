@@ -227,18 +227,6 @@ def initTables():
 	dbCursor.execute('''INSERT INTO content_table
 		VALUES (32, 'art')
 		''')
-	
-	dbCursor.execute('''INSERT INTO content_table
-		VALUES (33, 'art')
-		''')
-	
-	dbCursor.execute('''INSERT INTO content_table
-		VALUES (34, 'art')
-		''')
-	
-	dbCursor.execute('''INSERT INTO content_table
-		VALUES (35, 'art')
-		''')
 	######################### comments_table #########################
 	dbCursor.execute('''CREATE TABLE comments_table (
 			comment_id INT,
@@ -286,43 +274,43 @@ def initTables():
 
 	
 	dbCursor.execute('''INSERT INTO code_table
-		VALUES  (1, 5, 'Encoder #2', 'php', ' Uses polyalphabetic substitution to encode your plaintext into a more complex cipher')
+		VALUES  (1, 2, 'Encoder #2', 'php', ' Uses polyalphabetic substitution to encode your plaintext into a more complex cipher')
 		''')
 		
 	dbCursor.execute('''INSERT INTO code_table
-		VALUES  (2, 6, 'Encoder #1', 'php', ' Uses monoalphabetic substitution to encode your plaintext into a simple cipher')
+		VALUES  (2, 3, 'Encoder #1', 'php', ' Uses monoalphabetic substitution to encode your plaintext into a simple cipher')
 		''')	
 		
 	dbCursor.execute('''INSERT INTO code_table
-		VALUES  (3, 7, 'Page Hit Counter', 'php', 'Counts how many visits a webpage has had')
+		VALUES  (3, 4, 'Page Hit Counter', 'php', 'Counts how many visits a webpage has had')
 		''')
 		
 	dbCursor.execute('''INSERT INTO code_table
-		VALUES  (4, 8, 'MD5 Brute Forcer', 'php', 'Takes an MD5 hash in hexadecimal form and brute forces it to find the password')
+		VALUES  (4, 5, 'MD5 Brute Forcer', 'php', 'Takes an MD5 hash in hexadecimal form and brute forces it to find the password')
 		''')
 		
 	dbCursor.execute('''INSERT INTO code_table
-		VALUES  (5, 9, 'Login Script', 'php', 'Allows you to authenticate to another page. Username is "admin" and password is "enterthecamel"')
+		VALUES  (5, 6, 'Login Script', 'php', 'Allows you to authenticate to another page. Username is "admin" and password is "enterthecamel"')
 		''')
 			
 	dbCursor.execute('''INSERT INTO code_table
-		VALUES  (6, 10, 'Socket Client', 'python', 'Sets up a communication between the server and the client. The client side sends messages')
+		VALUES  (6, 7, 'Socket Client', 'python', 'Sets up a communication between the server and the client. The client side sends messages')
 		''')
 		
 	dbCursor.execute('''INSERT INTO code_table
-		VALUES  (7, 11, 'Socket Server', 'python', 'Sets up a communication between the server and the client. The server side receives messages')
+		VALUES  (7, 8, 'Socket Server', 'python', 'Sets up a communication between the server and the client. The server side receives messages')
 		''')
 		
 	dbCursor.execute('''INSERT INTO code_table
-		VALUES  (8, 12, 'Real 6 Solver', 'python', 'Solves HackThisSite realistic challenge #6 (www.hackthissite.org/playlevel/6/)')
+		VALUES  (8, 9, 'Real 6 Solver', 'python', 'Solves HackThisSite realistic challenge #6 (www.hackthissite.org/playlevel/6/)')
 		''')	
 				
 	dbCursor.execute('''INSERT INTO code_table
-		VALUES  (9, 13, 'Prog 1 Solver', 'python', 'Solves HackThisSites programming challenge #1 (www.hackthissite.org/missions/prog/1/)')
+		VALUES  (9, 10, 'Prog 1 Solver', 'python', 'Solves HackThisSites programming challenge #1 (www.hackthissite.org/missions/prog/1/)')
 		''')		
 			
 	dbCursor.execute('''INSERT INTO code_table
-		VALUES  (10, 14, 'Triangular Encryption', 'python', 'Encrypts the plaintext using the triangle algorithm')
+		VALUES  (10, 11, 'Triangular Encryption', 'python', 'Encrypts the plaintext using the triangle algorithm')
 		''')
 	
 	######################### art_table #########################
@@ -337,87 +325,87 @@ def initTables():
 			)''')
 	
 	dbCursor.execute('''INSERT INTO art_table
-		VALUES  (1, 15, 'Forgotten Garden', 'website')
+		VALUES  (1, 12, 'Forgotten Garden', 'website')
 		''')
 	
 	dbCursor.execute('''INSERT INTO art_table
-		VALUES  (2, 16, 'City Skyline Theme', 'website')
+		VALUES  (2, 13, 'City Skyline Theme', 'website')
 		''')
 	
 	dbCursor.execute('''INSERT INTO art_table
-		VALUES  (3, 17, 'Blue Ground 9! Full of computing challenges', 'website')
+		VALUES  (3, 14, 'Blue Ground 9! Full of computing challenges', 'website')
 		''')
 	
 	dbCursor.execute('''INSERT INTO art_table
-		VALUES  (4, 18, 'Red Theme using JQuery', 'website')
+		VALUES  (4, 15, 'Red Theme using JQuery', 'website')
 		''')
 	
 	dbCursor.execute('''INSERT INTO art_table
-		VALUES  (5, 19, 'The second version of Astrocamel.com!', 'website')
+		VALUES  (5, 16, 'The second version of Astrocamel.com!', 'website')
 		''')
 	
 	dbCursor.execute('''INSERT INTO art_table
-		VALUES  (6, 20, 'An urban themed website', 'website')
+		VALUES  (6, 17, 'An urban themed website', 'website')
 		''')
 	
 	dbCursor.execute('''INSERT INTO art_table
-		VALUES  (7, 21, 'ToPloumi.com - A website I created for the woodcarving bussiness', 'website')
+		VALUES  (7, 18, 'ToPloumi.com - A website I created for the woodcarving bussiness', 'website')
 		''')
 	
 	dbCursor.execute('''INSERT INTO art_table
-		VALUES  (8, 22, 'Quantum Logic - A website I created for an assignment', 'website')
+		VALUES  (8, 19, 'Quantum Logic - A website I created for an assignment', 'website')
 		''')
 	
 	dbCursor.execute('''INSERT INTO art_table
-		VALUES  (9, 23, 'Vincent - Design with opacity', 'website')
+		VALUES  (9, 20, 'Vincent - Design with opacity', 'website')
 		''')
 	
 	dbCursor.execute('''INSERT INTO art_table
-		VALUES  (10, 24, 'The third version of Astrocamel.com!', 'website')
+		VALUES  (10, 21, 'The third version of Astrocamel.com!', 'website')
 		''')
 	
 	dbCursor.execute('''INSERT INTO art_table
-		VALUES  (11, 25, 'Kenny, Cartman, Stan, Kyle', 'gfx')
+		VALUES  (11, 22, 'Kenny, Cartman, Stan, Kyle', 'gfx')
 		''')
 
 	dbCursor.execute('''INSERT INTO art_table
-		VALUES  (12, 26, 'Ironman MARK I', 'gfx')
+		VALUES  (12, 23, 'Ironman MARK I', 'gfx')
 		''')
 
 	dbCursor.execute('''INSERT INTO art_table
-		VALUES  (13, 27, 'Three Days of the Condor', 'gfx')
+		VALUES  (13, 24, 'Three Days of the Condor', 'gfx')
 		''')
 
 	dbCursor.execute('''INSERT INTO art_table
-		VALUES  (14, 28, 'HackThisZine Cover', 'gfx')
+		VALUES  (14, 25, 'HackThisZine Cover', 'gfx')
 		''')
 
 	dbCursor.execute('''INSERT INTO art_table
-		VALUES  (15, 29, 'Freedom', 'gfx')
+		VALUES  (15, 26, 'Freedom', 'gfx')
 		''')
 
 	dbCursor.execute('''INSERT INTO art_table
-		VALUES  (16, 30, 'Dead Flower', 'gfx')
+		VALUES  (16, 27, 'Dead Flower', 'gfx')
 		''')
 
 	dbCursor.execute('''INSERT INTO art_table
-		VALUES  (17, 31, 'Bicommunal Rock Concert flyer', 'gfx')
+		VALUES  (17, 28, 'Bicommunal Rock Concert flyer', 'gfx')
 		''')
 
 	dbCursor.execute('''INSERT INTO art_table
-		VALUES  (18, 32, 'The Call of Cthulhu', 'gfx')
+		VALUES  (18, 29, 'The Call of Cthulhu', 'gfx')
 		''')
 
 	dbCursor.execute('''INSERT INTO art_table
-		VALUES  (19, 33, 'Orange', 'gfx')
+		VALUES  (19, 30, 'Orange', 'gfx')
 		''')
 
 	dbCursor.execute('''INSERT INTO art_table
-		VALUES  (20, 34, 'Generic Album Cover', 'gfx')
+		VALUES  (20, 31, 'Generic Album Cover', 'gfx')
 		''')
 
 	dbCursor.execute('''INSERT INTO art_table
-		VALUES  (21, 35, 'The Millenium Falcon', 'gfx')
+		VALUES  (21, 32, 'The Millenium Falcon', 'gfx')
 		''')
 		
 	######################### msgs_table #########################
