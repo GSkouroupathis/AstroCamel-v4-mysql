@@ -2,7 +2,7 @@
 
 body {
 	margin:0;
-	background: #8B7765 url('../imgs/body.png');
+	background: #EEE9BF url('../imgs/body.png');
 	font-family: Dosis, "Helvetica Neue", "Helvetica", "sans-serif";
 	font-size: 20px;
 }
@@ -22,7 +22,7 @@ a.txt-lnk:hover {
 	height: 100px;
 	margin: 0;
 	padding: 0;
-	background: #CDAF95 url('../imgs/headercont.png');
+	background: #EEE9BF url('../imgs/headercont.png');
 }
 
 #header-cntr {
