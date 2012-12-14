@@ -1,1 +1,16 @@
-shaikh abdullah
+GitHub's new ‘Gists’ provide quick and easy code sharing, allowing
+the user to do this with much less trouble than creating a repository is. 
+
+The user can now create new files through the company's web interface,
+including snippets of code which are too short to bother creating a
+brand new Git repository for, but still want to save and share them.
+
+This makes Gists use similar to what Pastebin has been doing all these
+years. Yet Gists are said to be way more powerful, since from the moment
+of their creation they are considered to be fully worrking Git
+repositories which are automatically versioned and forkable by users.
+
+Github's Gists are truly revolutionary, but can they fully replace
+Pastebin's simple use? It sure is much quicker to share snippets through
+Pastebin, but in the case where you want to save your code and reuse it,
+Gists are the way to do it.
