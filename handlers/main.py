@@ -26,6 +26,12 @@ class MainHandler(BaseHandler):
 		news = []
 		news.extend(databaseOperations.fetchAllNews(10))#to convert from sqlite3 object to list
 		
+		#counts the webpage hits                                                                                                                                
+		with open('../hits.txt', 'r') as hitsFile:
+			hits = int(hitsFile.readline()) + 1
+		with open('../hits.txt', 'w') as hitsFile:
+			hitsFile.write(str(hits))
+                        
 		#modifyList adds a preview of the news to every new(new[3])
 		def modifyList(new):
 			path = '../news/' + str(new[0])

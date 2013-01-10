@@ -25,9 +25,24 @@
 @import url("{{static_url('styles/style-main.css')}}");
 </style>
 
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
+<script type="text/javascript">
+/*more news script*/
+$(document).ready(function(){
+$(".presection").mouseenter(function(){
+    $(this).css("cursor", "crosshair");
+  });
+$(".presection").click(function(){
+    $(this).next(".more-news").slideToggle(250);
+  });
+});
+</script>
 </head>
  
 <body>
+	
+	<a href="https://github.com/GSkouroupathis/AstroCamel-v4-mysql"><img style="position: absolute; top: 0; right: 10px; z-index: 99; border: 0;"
+	src="{{static_url('imgs/forkme.png')}}" alt="Fork me on GitHub"></a>
 	
 	<div id="header-container">
 		<div id="header-cntr">
@@ -55,7 +70,7 @@
 			{% else %}
 				<h4>You are visiting as a guest</h4>
 			{% end %}
-			{% for new in news %}
+			{% for new in news[:3] %}
          		<div class="news-container">
 				<div class="news-img">
 				<a href="{{('shownews/%s') %new[1]}}">
@@ -72,7 +87,32 @@
 				
 			</div>
 			
-       			{% end %}
+       {% end %}
+			
+			<!-- MORE NEWS -->
+			<div class="presection">
+			View More News
+			</div>
+			<div class="more-news">
+				{% for new in news[3:] %}
+         		<div class="news-container">
+				<div class="news-img">
+				<a href="{{('shownews/%s') %new[1]}}">
+				<img src="{{static_url('imgs/news/%s.jpg' %new[0])}}" alt="{{new[0]}}" /></div>
+				<div class="news">
+				<u>{{new[2]}}</u> - <i>{{new[4]}}</i>
+				<br />
+				{{new[3][:100]}}...
+				</div>
+				</a>
+				{% if isAdmin %}
+					-------------------------------------<a href="/deletenews/{{new[0]}}"><input type="button" class="button" value="X" /></a>
+				{% end %}
+				
+			</div>
+			
+       {% end %}
+			</div>
 			
 		</div>
 	</div>

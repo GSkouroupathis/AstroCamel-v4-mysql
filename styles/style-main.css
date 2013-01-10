@@ -444,3 +444,20 @@ textarea.message-txt:focus {
 	position: relative;
 	top: 1px;
 }
+
+.more-news {
+	display: none;
+}
+
+.presection {
+	width: 768px;
+	margin: 7px 0 10px 0;
+	padding: 4px 0 3px 10px;
+	border: 1px solid #AB9785;
+	background: #FFFFFF;
+	font-size: 20px;
+}
+
+.presection:hover {
+	background: #FFFAF0;
+}
