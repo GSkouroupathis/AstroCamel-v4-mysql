@@ -13,6 +13,7 @@ import smtplib
 from email.mime.text import MIMEText
 import string
 from PIL import Image
+import hitsLib
 
 #Base Handler
 class BaseHandler(tornado.web.RequestHandler):
@@ -27,10 +28,7 @@ class MainHandler(BaseHandler):
 		news.extend(databaseOperations.fetchAllNews(10))#to convert from sqlite3 object to list
 		
 		#counts the webpage hits                                                                                                                                
-		with open('../hits.txt', 'r') as hitsFile:
-			hits = int(hitsFile.readline()) + 1
-		with open('../hits.txt', 'w') as hitsFile:
-			hitsFile.write(str(hits))
+		hitsLib.updateHits('hits.txt')
                         
 		#modifyList adds a preview of the news to every new(new[3])
 		def modifyList(new):
@@ -376,12 +374,16 @@ class AdminHandler(BaseHandler):
 			self.redirect("/")
 			return
 		else:
+			#Get hits
+			hitsList = hitsLib.readHits('hits.txt')
+			hitsList = map(lambda x:x.split(':')[1], hitsList)
+			print hitsList
 			userList = []
 			userList.extend(databaseOperations.fetchAllUsers())#to convert from sqlite3 object to list
 			msgs = []
 			msgs.extend(databaseOperations.fetchMsgs(2))#to convert from sqlite3 object to list
 			databaseOperations.closeConnectionToDatabase()
-			self.render("../admin.html", userName=self.get_secure_cookie("user"), userList=userList, msgs=msgs, errMsg = None)
+			self.render("../admin.html", userName=self.get_secure_cookie("user"), userList=userList, hitsList=hitsList, msgs=msgs, errMsg = None)
 		
 	def post(self):
 		self.redirect("/")
