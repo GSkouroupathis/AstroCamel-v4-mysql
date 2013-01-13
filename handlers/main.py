@@ -27,7 +27,7 @@ class MainHandler(BaseHandler):
 		news = []
 		news.extend(databaseOperations.fetchAllNews(10))#to convert from sqlite3 object to list
 		
-		#counts the webpage hits                                                                                                                                
+		#counts the webpage hits
 		hitsLib.updateHits('hits.txt')
                         
 		#modifyList adds a preview of the news to every new(new[3])
@@ -377,7 +377,6 @@ class AdminHandler(BaseHandler):
 			#Get hits
 			hitsList = hitsLib.readHits('hits.txt')
 			hitsList = map(lambda x:x.split(':')[1], hitsList)
-			print hitsList
 			userList = []
 			userList.extend(databaseOperations.fetchAllUsers())#to convert from sqlite3 object to list
 			msgs = []
