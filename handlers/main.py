@@ -322,8 +322,12 @@ class BanHandler(BaseHandler):
 			userList.extend(databaseOperations.fetchAllUsers())#to convert from sqlite3 object to list
 			msgs = []
 			msgs.extend(databaseOperations.fetchMsgs(2))#to convert from sqlite3 object to list
-
-			self.render("../admin.html", userName=user, userList = userList, msgs=msgs, errMsg = "User " + bannedUser + " succesfully banned")
+			
+			#Get hits
+			hitsList = hitsLib.readHits('hits.txt')
+			hitsList = map(lambda x:x.split(':')[1], hitsList)
+						
+			self.render("../admin.html", userName=user, userList = userList, hitsList = hitsList, msgs=msgs, errMsg = "User " + bannedUser + " succesfully banned")
 			databaseOperations.closeConnectionToDatabase()
 		except:
 			userList = []
@@ -352,8 +356,12 @@ class UnbanHandler(BaseHandler):
 			userList.extend(databaseOperations.fetchAllUsers())#to convert from sqlite3 object to list
 			msgs = []
 			msgs.extend(databaseOperations.fetchMsgs(2))#to convert from sqlite3 object to list
-
-			self.render("../admin.html", userName=user, userList = userList, msgs=msgs, errMsg = "User " + unbannedUser + " succesfully unbanned")
+			
+			#Get hits
+			hitsList = hitsLib.readHits('hits.txt')
+			hitsList = map(lambda x:x.split(':')[1], hitsList)
+			
+			self.render("../admin.html", userName=user, userList = userList, hitsList = hitsList, msgs=msgs, errMsg = "User " + unbannedUser + " succesfully unbanned")
 			databaseOperations.closeConnectionToDatabase()
 		except:
 			userList = []
@@ -487,8 +495,12 @@ class PostNewsHandler(BaseHandler):
 		msgs.extend(databaseOperations.fetchMsgs(2))#to convert from sqlite3 object to list
 
 		databaseOperations.closeConnectionToDatabase()
-			
-		self.render("../admin.html", userName=self.get_secure_cookie("user"), userList=userList, msgs=msgs, errMsg = "News posted succesfully!")
+
+		#Get hits
+		hitsList = hitsLib.readHits('hits.txt')
+		hitsList = map(lambda x:x.split(':')[1], hitsList)
+		
+		self.render("../admin.html", userName=self.get_secure_cookie("user"), userList=userList, hitsList = hitsList, msgs=msgs, errMsg = "News posted succesfully!")
 		
 #UploadCodeHandler
 class UploadCodeHandler(BaseHandler):
@@ -519,8 +531,12 @@ class UploadCodeHandler(BaseHandler):
 		msgs.extend(databaseOperations.fetchMsgs(2))#to convert from sqlite3 object to list
 
 		databaseOperations.closeConnectionToDatabase()
-			
-		self.render("../admin.html", userName=self.get_secure_cookie("user"), userList=userList, msgs=msgs, errMsg = "Code uploaded succesfully!")
+		
+		#Get hits
+		hitsList = hitsLib.readHits('hits.txt')
+		hitsList = map(lambda x:x.split(':')[1], hitsList)
+		
+		self.render("../admin.html", userName=self.get_secure_cookie("user"), userList=userList, hitsList = hitsList, msgs=msgs, errMsg = "Code uploaded succesfully!")
 		
 #UploadGfxHandler
 class UploadGfxHandler(BaseHandler):
@@ -560,8 +576,12 @@ class UploadGfxHandler(BaseHandler):
 		msgs.extend(databaseOperations.fetchMsgs(2))#to convert from sqlite3 object to list
 
 		databaseOperations.closeConnectionToDatabase()
-	
-		self.render("../admin.html", userName=self.get_secure_cookie("user"), userList=userList, msgs=msgs, errMsg = "GFX uploaded succesfully!")
+
+		#Get hits
+		hitsList = hitsLib.readHits('hits.txt')
+		hitsList = map(lambda x:x.split(':')[1], hitsList)
+			
+		self.render("../admin.html", userName=self.get_secure_cookie("user"), userList=userList, hitsList = hitsList, msgs=msgs, errMsg = "GFX uploaded succesfully!")
 		
 #PostCommentHandler
 class PostCommentHandler(BaseHandler):
